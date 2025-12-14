@@ -31,48 +31,7 @@
             },
         }
     </script>
-<style>
-h1,h2,h3,h4,h5,h6{
-font-weight:600 !important;
-line-height:calc(1em + 5px) !important;
-}
-.hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-.hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }@font-face {
-            font-family: 'BBH Bogle';
-            src: local('BBH Bogle'), local('Bogle-Regular'), url('https://fonts.cdnfonts.com/s/93345/Bogle-Regular.woff') format('woff');
-            font-weight: 400;
-            font-style: normal;
-        }
-        .clip-path-slant {
-             clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
-        }
-        @media (max-width: 1024px) {
-            .clip-path-slant {
-                clip-path: none;
-            }
-        }
-        #homepage-search-dropdown {
-            max-height: 150px;
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #e0ac24 transparent;
-        }
-        #homepage-search-dropdown::-webkit-scrollbar {
-            width: 5px;
-        }
-        #homepage-search-dropdown::-webkit-scrollbar-thumb {
-            background-color: #e0ac24;
-            border-radius: 999px;
-        }
-        #homepage-search-dropdown::-webkit-scrollbar-track {
-            background: transparent;
-        }
-    </style>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body data-page="home" class="bg-background-light text-[#1b0e0e] font-body antialiased overflow-x-hidden selection:bg-gold/30">
 <header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
@@ -142,9 +101,9 @@ line-height:calc(1em + 5px) !important;
                 </div>
 <div class="space-y-6">
 <p class="text-sm font-semibold tracking-[0.4em] text-gray-500 uppercase">Dubai Real Estate Intelligence</p>
-<h2 class="text-5xl font-display text-gray-900 leading-tight">
+<h1 class="text-4xl md:text-6xl font-display text-gray-900 leading-tight">
                     Experience Dubai's <span class="text-primary">Golden Standard</span>
-                </h2>
+                </h1>
 <p class="text-lg text-gray-600 max-w-xl">Million Dream pairs global investors with the most visionary developers. Discover curated launches, verified partners, and concierge-level support for your next address.</p>
 </div>
 <div class="bg-white rounded-3xl p-4 shadow-2xl shadow-gold/10 border border-gold/10 flex flex-col md:flex-row items-center gap-3 relative z-20">

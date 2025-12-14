@@ -1,0 +1,79 @@
+:root {
+    --primary: #e0ac24;
+    --gold: #e0ac24;
+    --background-light: #fcf8f8;
+    --background-dark: #211111;
+    --text-body: #1b0e0e;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-body);
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Italiana', serif !important;
+    font-weight: 600 !important;
+    line-height: calc(1em + 5px);
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@font-face {
+    font-family: 'BBH Bogle';
+    src: local('BBH Bogle'), local('Bogle-Regular'), url('https://fonts.cdnfonts.com/s/93345/Bogle-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+}
+
+@media (max-width: 1024px) {
+    .clip-path-slant {
+        clip-path: none;
+    }
+}
+
+#homepage-search-dropdown {
+    max-height: 150px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+#homepage-search-dropdown::-webkit-scrollbar {
+    width: 5px;
+}
+
+#homepage-search-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 999px;
+}
+
+#homepage-search-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
