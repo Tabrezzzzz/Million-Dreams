@@ -35,12 +35,10 @@
 <div class="relative flex min-h-screen w-full flex-col group/design-root">
 <!-- Header -->
 <header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
-<div class="px-4 md:px-8 lg:px-12 xl:px-10 py-8 flex items-center gap-6 w-full">
+<div class="px-4 md:px-8 lg:px-12 xl:px-20 py-8 flex items-center gap-6 w-full">
 <div class="flex items-center gap-3 group cursor-pointer shrink-0">
-<div class="size-10 bg-gold rounded-2xl flex items-center justify-center text-white shadow-lg shadow-gold/40">
-<span class="material-symbols-outlined text-[22px]">apartment</span>
-</div>
-<h1 class="text-2xl font-display font-bold tracking-tight text-gray-900 group-hover:text-gold transition-colors">Million Dream</h1>
+<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-16 w-auto object-contain drop-shadow-lg" loading="lazy"/>
+<span class="sr-only">Million Dream</span>
 </div>
 <nav class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
 <a data-nav-link="home" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="index.html">Home</a>
@@ -53,7 +51,7 @@
 <span class="material-symbols-outlined text-[18px]">chat</span>
 <span>WhatsApp</span>
 </a>
-<button class="bg-gradient-to-r from-primary to-[#f4ce5d] hover:from-[#c38a13] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[150px] justify-center">
+<button type="button" data-link="contact" class="bg-gradient-to-r from-primary to-[#f4ce5d] hover:from-[#c38a13] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[150px] justify-center">
 <span>Enquire</span>
 <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
 </button>
@@ -66,10 +64,8 @@
 <div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-3">
-<div class="size-10 bg-gold rounded-2xl flex items-center justify-center text-white shadow-lg shadow-gold/40">
-<span class="material-symbols-outlined text-[22px]">apartment</span>
-</div>
-<p class="text-lg font-display font-bold text-gray-900">Million Dream</p>
+<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-12 w-auto object-contain drop-shadow-lg" loading="lazy"/>
+<span class="sr-only">Million Dream</span>
 </div>
 <button id="mobile-menu-close" class="p-2 text-gray-900">
 <span class="material-symbols-outlined text-[28px]">close</span>
@@ -86,7 +82,7 @@
 <span class="material-symbols-outlined text-[18px]">chat</span>
 <span>WhatsApp</span>
 </a>
-<button class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#f4ce5d] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all">
+<button type="button" data-link="contact" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#f4ce5d] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all">
 <span>Enquire</span>
 <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
 </button>
@@ -187,11 +183,9 @@
 <footer class="bg-background-light pt-20 pb-8 px-4 md:px-12 xl:px-40 border-t border-gray-200">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
-<div class="flex items-center gap-2">
-<div class="size-8 bg-gold rounded-br-lg rounded-tl-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-[20px]">apartment</span>
-</div>
-<h1 class="text-xl font-display font-bold tracking-tight text-gray-900">Million Dream</h1>
+<div class="flex items-center gap-3">
+<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-10 w-auto object-contain drop-shadow" loading="lazy"/>
+<span class="sr-only">Million Dream</span>
 </div>
 <p class="text-gray-500 text-sm leading-relaxed">
                     Your premier partner for luxury real estate in Dubai. We turn million-dollar dreams into addressable reality.
@@ -231,7 +225,7 @@
 <div class="rounded-xl overflow-hidden h-40 bg-gray-200 relative group">
 <img class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" data-alt="Map location preview" data-location="Dubai Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobA5kGoMYa7_L-9bIaaFYzmkMcAuaiQ-01694pUeiOmTdo9IS-zC16-fWjWGtJuhKY4T-YbHd3FVtArmaBrfyJni9g0FA-sxlY9c-bNYTKfMlKP13f2xJIBEfxKVTdZ0b4ZcvEwHCKB4RKGLEW_OfcKg7r_4UjSP_mILRv6cnF1rPRi3RHV8XuB62_fswTF8kfokqKgdk7xIAQMcsIPEjkGA3SbGyLM-H9f0bGhu3GB6U87eUU7p8WW84xBZJwB_mkxels7Z8NWs"/>
 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<button class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm">View on Map</button>
+<a href="https://maps.app.goo.gl/3rJj5vVAGP3dDubai" target="_blank" rel="noopener" class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm inline-flex items-center gap-1">View on Map<span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
 </div>
 </div>
 </div>
@@ -464,5 +458,31 @@
         });
 
         applyInitialQuery();
+
+        const buttonRoutes = {
+            contact: "contact-us.html#contact-form",
+            developers: "developer.html",
+            "developers-search": "#developer-search",
+        };
+
+        const navigateTo = (destination) => {
+            if (!destination) return;
+            if (destination.startsWith("#")) {
+                document.querySelector(destination)?.scrollIntoView({behavior: "smooth"});
+                return;
+            }
+            if (destination.includes("contact-us.html#contact-form") && /contact-us\\.html$/i.test(window.location.pathname)) {
+                document.querySelector("#contact-form")?.scrollIntoView({behavior: "smooth"});
+                return;
+            }
+            window.location.href = destination;
+        };
+
+        document.querySelectorAll("[data-link]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const target = button.dataset.link;
+                navigateTo(buttonRoutes[target] || target);
+            });
+        });
     </script>
 </body></html>
