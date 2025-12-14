@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Million Dream - About Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bogle:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.cdnfonts.com/css/bbh-bogle" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e0ac24",
+                        "gold": "#e0ac24",
+                        "background-light": "#fcf8f8",
+                        "background-dark": "#211111",
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Italiana", "serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "4xl": "2.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+h1,h2,h3,h4,h5,h6{
+font-family:'Italiana',serif !important;
+font-weight:600 !important;
+line-height:calc(1em + 5px) !important;
+}
+</style>
+</head>
+<body data-page="about" class="bg-background-light text-[#1b0e0e] font-body antialiased overflow-x-hidden selection:bg-gold/30">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Navigation -->
+<header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
+<div class="px-4 md:px-8 lg:px-12 xl:px-10 py-8 flex items-center gap-6 w-full">
+<div class="flex items-center gap-3 group cursor-pointer shrink-0">
+<div class="size-10 bg-gold rounded-2xl flex items-center justify-center text-white shadow-lg shadow-gold/40">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</div>
+<h1 class="text-2xl font-display font-bold tracking-tight text-gray-900 group-hover:text-gold transition-colors">Million Dream</h1>
+</div>
+<nav class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
+<a data-nav-link="home" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="index.html">Home</a>
+<a data-nav-link="about" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="about-us.html" aria-current="page">About</a>
+<a data-nav-link="developers" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="developer.html">Developers</a>
+<a data-nav-link="contact" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="contact-us.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden md:inline-flex items-center gap-2 bg-white/80 border border-[#25D366]/40 text-[#1d7a4a] px-6 py-3 rounded-2xl text-sm md:text-base font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all min-w-[150px] justify-center" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button class="bg-gradient-to-r from-primary to-[#f4ce5d] hover:from-[#c38a13] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[150px] justify-center">
+<span>Enquire</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-2 text-gray-900">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-gold rounded-2xl flex items-center justify-center text-white shadow-lg shadow-gold/40">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</div>
+<p class="text-lg font-display font-bold text-gray-900">Million Dream</p>
+</div>
+<button id="mobile-menu-close" class="p-2 text-gray-900">
+<span class="material-symbols-outlined text-[28px]">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-3 text-base font-semibold">
+<a data-nav-link="home" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="index.html">Home</a>
+<a data-nav-link="about" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="about-us.html">About</a>
+<a data-nav-link="developers" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="developer.html">Developers</a>
+<a data-nav-link="contact" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="contact-us.html">Contact</a>
+</nav>
+<div class="flex flex-col gap-3">
+<a class="inline-flex items-center justify-center gap-2 bg-white border border-[#25D366]/40 text-[#1d7a4a] px-4 py-3 rounded-2xl font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#f4ce5d] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all">
+<span>Enquire</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative w-full py-12 md:py-24">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="flex flex-col gap-12 lg:flex-row lg:items-center">
+<div class="flex flex-1 flex-col gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Since 2009</span>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-display leading-tight text-gray-900">
+                                Curating Dubai's <br class="hidden lg:block"/>
+<span class="text-primary">Skyline Creators</span>
+</h1>
+</div>
+<p class="max-w-xl text-lg text-gray-500 leading-relaxed">
+                            Million Dream is a boutique collective of Dubai’s most trusted real estate developers. We showcase signature residences across the UAE and guide buyers through every phase—from discovery to handover.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<button class="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-white transition-all hover:bg-[#c38a13] hover:shadow-lg hover:shadow-primary/30">
+                                Explore Our Vision
+                            </button>
+<button class="inline-flex h-12 items-center justify-center rounded-full bg-white border border-gray-200 px-8 text-base font-bold text-gray-900 transition-all hover:bg-gray-50">
+                                Meet the Developers
+                            </button>
+</div>
+</div>
+<div class="flex flex-1 justify-end">
+<div class="relative w-full max-w-[600px] aspect-[4/3] overflow-hidden rounded-[2.5rem] shadow-2xl">
+<img class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Abstract low angle view of Dubai skyscrapers against a clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGWS6VLPDdDJcnzntW7CGOgIQjApQxDxCkAqb-ayornA5Mq-Roak5StkpyF0loCIr1R6ImLJhk0Y2hnVfnF6EpShSEVsdVW6g4REdZVtPs-ETqsbj1hbuSVbyVfPvHO-QKDygRGBmRfxzv8uZlwePKUSaq7Umhhr15-ZpyEtNegoXjp2htbx2gpsje9WSw1IidStJpQU1Vw9mp3pbcJfrglq72cEIVlpTz90CwK_1rxp8UxmDBxQ6omRwNiEZbFcOFz7TjZEhES-EH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="flex items-center gap-3 rounded-full bg-white/90 backdrop-blur-sm p-2 pr-6 w-fit shadow-lg">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold text-gray-900">Verified Developers Only</p>
+<p class="text-[10px] text-gray-500">Strict vetting process applied</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Ribbon -->
+<section class="w-full border-y border-black/5 bg-white py-12 dark:bg-white/5 dark:border-white/10">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div class="flex flex-col items-start gap-1">
+<p class="text-4xl font-bold tracking-tight text-gray-900">150+</p>
+<p class="text-sm font-medium text-gray-500 uppercase tracking-wide">Verified Developers</p>
+</div>
+<div class="flex flex-col items-start gap-1">
+<p class="text-4xl font-bold tracking-tight text-gray-900">3.2k</p>
+<p class="text-sm font-medium text-gray-500 uppercase tracking-wide">Projects Delivered</p>
+</div>
+<div class="flex flex-col items-start gap-1">
+<p class="text-4xl font-bold tracking-tight text-gray-900">15</p>
+<p class="text-sm font-medium text-gray-500 uppercase tracking-wide">Years of Excellence</p>
+</div>
+<div class="flex flex-col items-start gap-1">
+<p class="text-4xl font-bold tracking-tight text-gray-900">50B+</p>
+<p class="text-sm font-medium text-gray-500 uppercase tracking-wide">AED Capital Represented</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission / Card Section -->
+<section class="w-full py-20 bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="bg-white dark:bg-[#2a1a1a] rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col gap-12 lg:flex-row lg:items-start">
+<div class="flex-1 lg:max-w-md">
+<span class="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+                                Our Mission
+                            </span>
+<h2 class="text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+                                The gold standard for developer verification.
+                            </h2>
+</div>
+<div class="flex-1 flex flex-col gap-8">
+<p class="text-lg leading-relaxed text-gray-500">
+                                We pair discerning buyers with the master developers shaping Dubai’s skyline. From branded residences on the Palm to waterfront enclaves in Abu Dhabi, our curators highlight only those with financial strength, architectural vision, and proven delivery.
+                            </p>
+<div class="grid gap-6 sm:grid-cols-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-gray-900">Strictly B2B</h4>
+<p class="text-sm text-gray-500 mt-1">No property listings, just developer profiles.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">shield</span>
+<div>
+<h4 class="font-bold text-gray-900">RERA Verified</h4>
+<p class="text-sm text-gray-500 mt-1">Direct integration with regulatory data.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="w-full py-20">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="mb-16 max-w-2xl">
+<h2 class="text-3xl font-bold leading-tight tracking-tight md:text-4xl">The Three Pillars</h2>
+<p class="mt-4 text-lg text-gray-500">Our directory is built on three non-negotiable pillars of uncompromised quality.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<!-- Card 1 -->
+<div class="group flex flex-col gap-6 rounded-[2rem] border border-black/5 bg-white p-8 transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-white/5 dark:border-white/10">
+<div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/5 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined" style="font-size: 32px;">verified_user</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-xl font-bold text-gray-900">Rigorous Verification</h3>
+<p class="text-base leading-relaxed text-gray-500">
+                                Every partner is RERA compliant, fully licensed, and backed by completed communities with delighted homeowners.
+                            </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col gap-6 rounded-[2rem] border border-black/5 bg-white p-8 transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-white/5 dark:border-white/10">
+<div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/5 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined" style="font-size: 32px;">visibility</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-xl font-bold text-gray-900">Radical Transparency</h3>
+<p class="text-base leading-relaxed text-gray-500">
+                                Transparent milestone reports, escrow oversight, and open site visits give our clients a clear view at every step.
+                            </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col gap-6 rounded-[2rem] border border-black/5 bg-white p-8 transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-white/5 dark:border-white/10">
+<div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/5 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined" style="font-size: 32px;">architecture</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-xl font-bold text-gray-900">Future Vision</h3>
+<p class="text-base leading-relaxed text-gray-500">
+                                Sustainable materials, wellness amenities, and data-led master-planning keep our portfolio tuned to tomorrow’s demand.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder Note / Team Section -->
+<section class="w-full py-20 bg-white dark:bg-white/5 border-t border-black/5 dark:border-white/10">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+<div class="relative w-full md:w-1/3 max-w-[400px]">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-[2rem] bg-gray-200">
+<img class="h-full w-full object-cover" data-alt="Portrait of a professional man in a suit standing in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMG9qAC8keDgKGnv5WgsLXUC4qgUjTq6BkURMzUJ3RyUP91LkBU101VMnFBxOwZ1-UG3CoFGNJyNoyX7mZutvIAn-TSv5PgpYUa9aoydcwfA3fWCPTcY0WQJveJgjLtwcR5X1oq3kM461KK0Qz8LLmiBOVi_9JCZBb04vdZ0JPJ4KyJk0qmsvxg17gsNCUivZ5bqdXyhNbD5BjRbMCTxl6zm-S5LgGQPvXSiF0V2gNkZSunojbhvnl0zd9M_Ot5ckXuan257w30vV1"/>
+</div>
+<div class="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-background-light p-2 dark:bg-background-dark">
+<div class="flex h-full w-full items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-4xl">format_quote</span>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-6">
+<h3 class="text-2xl font-medium italic text-gray-500">
+                            "Dubai is not just building buildings; it is building a legacy. Million Dream ensures the hands crafting that legacy are as solid as the foundations they pour."
+                        </h3>
+<div class="h-px w-20 bg-primary/30"></div>
+<div>
+<p class="text-xl font-bold text-gray-900">Omar Al-Fayed</p>
+<p class="text-sm font-medium text-gray-500">Founder &amp; Editor-in-Chief</p>
+</div>
+<p class="max-w-xl text-base text-gray-500 mt-4">
+                            With over 20 years guiding flagship projects across the UAE, Omar launched Million Dream to give global buyers direct access to the country’s most reputable developers through one trusted, concierge-style platform.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative w-full overflow-hidden py-24">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img class="h-full w-full object-cover opacity-10" data-alt="Low angle architectural detail of glass building facade pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCefzhv4dSJDWffXsA38ir6Ex-SIjE_dYXCTmSDAzFDB7kmmpG31OWgMr4UgoSjz1LiyFHlo3iWi2v2MX3b-qLN8aU3WWaTdNUa0QZlIpqXGCy4TbILMluZEp1swdqsJBFW0ZnzpZGglvN1K8CC5peT54LHa3wTihhY_h28VLa6ynWw6Ec5e6Mn1tmNJx9KxYCt8RGWsWPOw5xzYZ_4WmQ8Gr9pgjY2alzkAUrU4gn6PzikWFqs7-oNkNCAUVWRcn9fKTr1F99IVhbY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background-light dark:to-background-dark"></div>
+</div>
+<div class="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center px-6">
+<span class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-bold text-primary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Private Consultations Open
+                </span>
+<h2 class="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
+                    Ready to explore UAE’s finest?
+                </h2>
+<p class="mb-10 text-lg text-gray-500">
+                    Sit down with our advisory desk for a personalized tour of luxury projects, upcoming launches, and investment-ready returns across the Emirates.
+                </p>
+<div class="flex flex-col gap-4 sm:flex-row">
+<button class="flex h-14 min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-8 text-base font-bold text-white transition-all hover:bg-[#c38a13] hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5">
+                        Book a Consultation
+                    </button>
+<button class="flex h-14 min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-gray-300 bg-white px-8 text-base font-bold text-gray-900 transition-all hover:bg-gray-50 hover:-translate-y-0.5">
+                        See Current Projects
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-light pt-20 pb-8 px-4 md:px-12 xl:px-40 border-t border-gray-200">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-gold rounded-br-lg rounded-tl-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</div>
+<h1 class="text-xl font-display font-bold tracking-tight text-gray-900">Million Dream</h1>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed">
+                    Your premier partner for luxury real estate in Dubai. We turn million-dollar dreams into addressable reality.
+                </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
+<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">work</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-6">Explore</h4>
+<ul class="space-y-3 text-sm text-gray-500">
+<li><a class="hover:text-gold transition-colors" href="#">Buy Property</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Sell Property</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Off-Plan Projects</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Property Management</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-gray-500">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold mt-0.5">location_on</span>
+<span>Level 12, Boulevard Plaza 1,<br/>Downtown Dubai, UAE</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gold">call</span>
+<span>+971 4 123 4567</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gold">mail</span>
+<span>concierge@milliondream.ae</span>
+</li>
+</ul>
+</div>
+<div class="rounded-xl overflow-hidden h-40 bg-gray-200 relative group">
+<img class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" data-alt="Map location preview" data-location="Dubai Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobA5kGoMYa7_L-9bIaaFYzmkMcAuaiQ-01694pUeiOmTdo9IS-zC16-fWjWGtJuhKY4T-YbHd3FVtArmaBrfyJni9g0FA-sxlY9c-bNYTKfMlKP13f2xJIBEfxKVTdZ0b4ZcvEwHCKB4RKGLEW_OfcKg7r_4UjSP_mILRv6cnF1rPRi3RHV8XuB62_fswTF8kfokqKgdk7xIAQMcsIPEjkGA3SbGyLM-H9f0bGhu3GB6U87eUU7p8WW84xBZJwB_mkxels7Z8NWs"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<button class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm">View on Map</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+<p>Ac 2024 Million Dream Real Estate. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-gold" href="#">Privacy Policy</a>
+<a class="hover:text-gold" href="#">Terms of Service</a>
+<a class="hover:text-gold" href="#">Sitemap</a>
+</div>
+<button class="bg-gray-100 p-2 rounded-full hover:bg-gold hover:text-white transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+</button>
+</div>
+</footer>
+</div>
+<script>
+        (function () {
+            const header = document.getElementById("main-header");
+            const body = document.body;
+            const currentPage = body.dataset.page;
+            const navLinks = document.querySelectorAll("[data-nav-link]");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileOpenBtn = document.getElementById("mobile-menu-button");
+            const mobileCloseBtn = document.getElementById("mobile-menu-close");
+
+            const setLinkState = () => {
+                navLinks.forEach((link) => {
+                    const isActive = link.dataset.navLink === currentPage;
+                    const muted = link.dataset.navMuted;
+                    if (isActive) {
+                        if (muted) link.classList.remove(muted);
+                        link.classList.add("bg-primary", "text-white", "shadow-lg", "shadow-primary/30");
+                    } else {
+                        link.classList.remove("bg-primary", "text-white", "shadow-lg", "shadow-primary/30");
+                        if (muted && !link.classList.contains(muted)) {
+                            link.classList.add(muted);
+                        }
+                    }
+                });
+            };
+
+            const setMenuState = (open) => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.toggle("translate-x-0", open);
+                mobileMenu.classList.toggle("translate-x-full", !open);
+                body.classList.toggle("overflow-hidden", open);
+                mobileOpenBtn?.setAttribute("aria-expanded", open);
+            };
+
+            mobileOpenBtn?.addEventListener("click", () => {
+                const isOpen = mobileOpenBtn.getAttribute("aria-expanded") === "true";
+                setMenuState(!isOpen);
+            });
+
+            mobileCloseBtn?.addEventListener("click", () => setMenuState(false));
+            mobileMenu?.querySelectorAll("a")?.forEach((link) =>
+                link.addEventListener("click", () => setMenuState(false))
+            );
+
+            if (header) {
+                const toggleHeaderState = () => {
+                    const isSticky = window.scrollY > 10;
+                    header.classList.toggle("shadow-xl", isSticky);
+                    header.classList.toggle("border-b", isSticky);
+                    header.classList.toggle("border-gold/20", isSticky);
+                    header.classList.toggle("bg-white/95", isSticky);
+                    header.classList.toggle("backdrop-blur-md", isSticky);
+                };
+                toggleHeaderState();
+                window.addEventListener("scroll", toggleHeaderState, {passive: true});
+            }
+
+            setLinkState();
+        })();
+    </script>
+</body></html>
