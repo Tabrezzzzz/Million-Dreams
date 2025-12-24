@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Million Dream - Developers</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Million Dreams - Developers</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#e0ac24",
+                        "primary": "#111827",
                         "background-light": "#fcf8f8",
                         "background-dark": "#211111",
                     },
@@ -25,314 +32,422 @@
                         "display": ["Italiana", "serif"],
                         "body": ["Manrope", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<link href="style.css" rel="stylesheet"/>
+
+    <style>
+        :root {
+            --primary: #111827;
+            --gold: #111827;
+        }
+
+        body.sharp-theme [class*="rounded"] {
+            border-radius: 3px !important;
+        }
+
+        body.sharp-theme .rounded-full {
+            border-radius: 3px !important;
+        }
+    </style>
 </head>
-<body data-page="developers" class="bg-background-light text-[#1b0e0e] font-body antialiased overflow-x-hidden">
-<div class="relative flex min-h-screen w-full flex-col group/design-root">
-<!-- Header -->
-<header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
-<div class="px-4 md:px-8 lg:px-12 xl:px-20 py-8 flex items-center gap-6 w-full">
-<div class="flex items-center gap-3 group cursor-pointer shrink-0">
-<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-16 w-auto object-contain drop-shadow-lg" loading="lazy"/>
-<span class="sr-only">Million Dream</span>
-</div>
-<nav class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
-<a data-nav-link="home" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="index.html">Home</a>
-<a data-nav-link="about" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="about-us.html">About</a>
-<a data-nav-link="developers" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="developer.html" aria-current="page">Developers</a>
-<a data-nav-link="contact" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="contact-us.html">Contact</a>
-</nav>
-<div class="flex items-center gap-4">
-<a class="hidden md:inline-flex items-center gap-2 bg-white/80 border border-[#25D366]/40 text-[#1d7a4a] px-6 py-3 rounded-2xl text-sm md:text-base font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all min-w-[150px] justify-center" href="https://wa.me/971523243879" target="_blank" rel="noopener">
-<span class="material-symbols-outlined text-[18px]">chat</span>
-<span>WhatsApp</span>
-</a>
-<button type="button" data-link="contact" class="bg-gradient-to-r from-primary to-[#f4ce5d] hover:from-[#c38a13] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[150px] justify-center">
-<span>Enquire</span>
-<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
-</button>
-<button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-2 text-gray-900">
-<span class="material-symbols-outlined text-[28px]">menu</span>
-</button>
-</div>
-</div>
-</header>
-<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-3">
-<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-12 w-auto object-contain drop-shadow-lg" loading="lazy"/>
-<span class="sr-only">Million Dream</span>
-</div>
-<button id="mobile-menu-close" class="p-2 text-gray-900">
-<span class="material-symbols-outlined text-[28px]">close</span>
-</button>
-</div>
-<nav class="flex flex-col gap-3 text-base font-semibold">
-<a data-nav-link="home" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="index.html">Home</a>
-<a data-nav-link="about" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="about-us.html">About</a>
-<a data-nav-link="developers" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="developer.html">Developers</a>
-<a data-nav-link="contact" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="contact-us.html">Contact</a>
-</nav>
-<div class="flex flex-col gap-3">
-<a class="inline-flex items-center justify-center gap-2 bg-white border border-[#25D366]/40 text-[#1d7a4a] px-4 py-3 rounded-2xl font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all" href="https://wa.me/971523243879" target="_blank" rel="noopener">
-<span class="material-symbols-outlined text-[18px]">chat</span>
-<span>WhatsApp</span>
-</a>
-<button type="button" data-link="contact" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#f4ce5d] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all">
-<span>Enquire</span>
-<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
-</button>
-</div>
-</div>
-<a href="https://wa.me/971523243879" target="_blank" rel="noopener" class="fixed bottom-6 right-4 md:right-8 z-40 inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-4 py-3 rounded-full shadow-xl shadow-[#25D366]/40 hover:bg-[#128C7E] transition-transform hover:-translate-y-0.5">
-<span class="material-symbols-outlined text-[20px]">chat</span>
-<span class="text-sm">WhatsApp</span>
-</a>
-<main class="flex-1">
-<!-- Hero Section -->
-<section class="relative flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 bg-cover bg-center" data-alt="Blurred Dubai skyline panorama at sunset with modern skyscrapers" style='background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(248, 246, 246, 1)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB80HKS1wghxweAY1lk8-5AS_s_YROot-wdGEMfIUa0rKQqSkSd0iCYF_jjGbkkjR8eKz3bE-6W8JsjXHepZZE9eRQ5S0-ZNh6Nr_l0WeOlTBXz8OO1igBtW7oB3YswhzgqxDWDKH3xRzpjk-fmyteSAekZq6QmIJoWK4ztZpJ2JJ4F3-eUs4aYuIHWPJ_WLNpaKlAPqzVXGWg8Q9hyNHsSy-gO48gZCwdthI4kVdqbMw0R_nkdrVIpM3RBL92d4bI7lul5c4qthVC6");'>
-<div class="w-full max-w-4xl text-center space-y-6">
-<h1 class="text-4xl md:text-6xl font-display leading-tight text-gray-900">
-                        Find Top Real Estate <br/><span class="text-primary">Developers in Dubai</span>
-</h1>
-<p class="mx-auto max-w-2xl text-lg text-gray-600 font-medium">
-                        Connect with the most trusted names in the UAE property market. Browse verified profiles, view portfolios, and contact developers directly.
+
+<body data-page="developers"
+    class="sharp-theme bg-background-light text-[#1b0e0e] font-body antialiased overflow-x-hidden selection:bg-gray-200">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root">
+        <!-- Header -->
+        <header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
+            <div class="px-4 md:px-8 lg:px-12 xl:px-20 py-8 flex items-center gap-6 w-full">
+                <div class="flex items-center gap-3 group cursor-pointer shrink-0">
+                    <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                        class="h-16 w-auto object-contain drop-shadow-lg" loading="lazy" />
+                    <span class="sr-only">Million Dreams</span>
+                </div>
+                <nav
+                    class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
+                    <a data-nav-link="home" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="index.html">Home</a>
+                    <a data-nav-link="about" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="about-us.html">About</a>
+                    <a data-nav-link="developers" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="developer.html" aria-current="page">Developers</a>
+                    <a data-nav-link="contact" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="contact-us.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a class="hidden md:inline-flex items-center gap-2 bg-white/80 border border-[#25D366]/40 text-[#1d7a4a] px-6 py-3 rounded-2xl text-sm md:text-base font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all min-w-[130px] justify-center "
+                        href="https://wa.me/971523243879" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined text-[18px]">chat</span>
+                        <span>WhatsApp</span>
+                    </a>
+                    <button type="button" data-link="contact"
+                        class="bg-gradient-to-r from-primary to-[#111827] hover:from-[#111827] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-gray-300 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[130px] justify-center ">
+                        <span>Enquire</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+                    </button>
+                    <button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false"
+                        class="lg:hidden p-2 text-gray-900">
+                        <span class="material-symbols-outlined text-[28px]">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div id="mobile-menu"
+            class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                        class="h-12 w-auto object-contain drop-shadow-lg" loading="lazy" />
+                    <span class="sr-only">Million Dreams</span>
+                </div>
+                <button id="mobile-menu-close" class="p-2 text-gray-900">
+                    <span class="material-symbols-outlined text-[28px]">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-3 text-base font-semibold">
+                <a data-nav-link="home" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="index.html">Home</a>
+                <a data-nav-link="about" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="about-us.html">About</a>
+                <a data-nav-link="developers" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10"
+                    href="developer.html">Developers</a>
+                <a data-nav-link="contact" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="contact-us.html">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3">
+                <a class="inline-flex items-center justify-center gap-2 bg-white border border-[#25D366]/40 text-[#1d7a4a] px-4 py-3 rounded-2xl font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all"
+                    href="https://wa.me/971523243879" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span>WhatsApp</span>
+                </a>
+                <button type="button" data-link="contact"
+                    class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#111827] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-gray-300 transition-all">
+                    <span>Enquire</span>
+                    <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+                </button>
+            </div>
+        </div>
+        <a href="tel:+971523243879"
+        class="fixed bottom-24 right-4 md:right-8 z-40 inline-flex items-center gap-2 bg-[#1f2937] text-white font-bold px-4 py-3 rounded-full shadow-xl shadow-gray-500/40 hover:bg-gray-900 transition-transform hover:-translate-y-0.5 min-w-[130px] justify-center"
+        aria-label="Call us">
+        <span class="material-symbols-outlined text-[20px]">call</span>
+        <span class="text-sm">Call Now</span>
+    </a>
+    <a href="https://wa.me/971523243879" target="_blank" rel="noopener"
+        class="fixed bottom-6 right-4 md:right-8 z-40 inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-4 py-3 rounded-full shadow-xl shadow-[#25D366]/40 hover:bg-[#1ea856] transition-transform hover:-translate-y-0.5 min-w-[130px] justify-center"
+        aria-label="WhatsApp chat">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+        <span class="text-sm">WhatsApp</span>
+    </a>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section
+                class="relative flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 bg-cover bg-center"
+                data-alt="Blurred Dubai skyline panorama at sunset with modern skyscrapers"
+                style='background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(248, 246, 246, 1)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB80HKS1wghxweAY1lk8-5AS_s_YROot-wdGEMfIUa0rKQqSkSd0iCYF_jjGbkkjR8eKz3bE-6W8JsjXHepZZE9eRQ5S0-ZNh6Nr_l0WeOlTBXz8OO1igBtW7oB3YswhzgqxDWDKH3xRzpjk-fmyteSAekZq6QmIJoWK4ztZpJ2JJ4F3-eUs4aYuIHWPJ_WLNpaKlAPqzVXGWg8Q9hyNHsSy-gO48gZCwdthI4kVdqbMw0R_nkdrVIpM3RBL92d4bI7lul5c4qthVC6");'>
+                <div class="w-full max-w-4xl text-center space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-display leading-tight text-gray-900">
+                        Find Top Real Estate <br /><span class="text-primary">Developers in Dubai</span>
+                    </h1>
+                    <p class="mx-auto max-w-2xl text-lg text-gray-600 font-medium">
+                        Connect with the most trusted names in the UAE property market. Browse verified profiles, view
+                        portfolios, and contact developers directly.
                     </p>
-<div class="mx-auto mt-8 flex w-full max-w-2xl items-center rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
-<div class="flex h-12 w-12 items-center justify-center rounded-lg text-gray-400">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input id="developer-search" class="h-full flex-1 border-0 bg-transparent px-2 text-base font-medium text-gray-900 placeholder:text-gray-400 focus:ring-0" placeholder="Search by developer name or location..." type="text"/>
-<button id="developer-search-btn" class="h-12 rounded-lg bg-primary px-8 text-base font-bold text-white transition-transform hover:scale-105">
+                    <div
+                        class="mx-auto mt-8 flex w-full max-w-2xl items-center rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg text-gray-400">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <input id="developer-search"
+                            class="h-full flex-1 border-0 bg-transparent px-2 text-base font-medium text-gray-900 placeholder:text-gray-400 focus:ring-0"
+                            placeholder="Search by developer name or location..." type="text" />
+                        <button id="developer-search-btn"
+                            class="h-12 rounded-lg bg-primary px-8 text-base font-bold text-white transition-transform hover:scale-105">
                             Search
                         </button>
-</div>
-</div>
-</section>
-<!-- Filters & Layout -->
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
-<!-- Filter Chips -->
-<div class="mb-10 flex flex-wrap items-center justify-center gap-3">
-<button class="group flex h-10 items-center gap-2 rounded-full border border-primary bg-primary/5 px-5 transition-all hover:bg-primary">
-<span class="material-symbols-outlined text-[20px] text-primary group-hover:text-white">tune</span>
-<span class="text-sm font-bold text-primary group-hover:text-white">All Filters</span>
-</button>
-<div class="h-8 w-px bg-gray-300 mx-2 hidden sm:block"></div>
-<button class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
-<span class="text-sm font-medium text-gray-700 group-hover:text-primary">Downtown Dubai</span>
-</button>
-<button class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
-<span class="text-sm font-medium text-gray-700 group-hover:text-primary">Dubai Marina</span>
-</button>
-<button class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
-<span class="text-sm font-medium text-gray-700 group-hover:text-primary">Business Bay</span>
-</button>
-<button class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
-<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
-<span class="text-sm font-medium text-gray-700 group-hover:text-primary">Verified Only</span>
-</button>
-<button class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
-<span class="text-sm font-medium text-gray-700 group-hover:text-primary">Luxury Specialists</span>
-</button>
-</div>
-<!-- Dynamic Grid -->
-<div id="developer-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8"></div>
-<div id="developer-empty" class="hidden text-center py-16 text-gray-500 font-semibold">No developers match your search.</div>
-</div>
-<div id="developer-modal" class="fixed inset-0 bg-black/50 backdrop-blur hidden items-center justify-center z-50 px-4">
-<div class="bg-white rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl animate-in fade-in duration-300 relative">
-<button id="developer-modal-close" class="absolute top-4 right-4 text-gray-500 hover:text-primary">
-<span class="material-symbols-outlined">close</span>
-</button>
-<div class="grid md:grid-cols-2">
-<div class="hidden md:flex bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZiMhKPZz6O1MJUL1wDxyJHw05WdInMEBFb-crm41JEtxLa6E1NEgTMjA_ZNkXDM0HValQXtQWWv7zUZELtd5zwXPuMz6WJ5RIJ2Cps7e1FqEGa64GECwdTZwm9EYzYilGJoGHKQrjNH97cZVa_WN7k841pFMV01GXSsV3l1tzfge17b4r700wSrmkP00UZeBR5DmCdw-SbGh6pZjVAhsjtVZ_RWb0cWiCMiAGjRbz2MSM_Vudb9S-q3UJpxfkeoSgOAcaThJr9Z0');"></div>
-<div class="p-8 space-y-6">
-<div>
-<p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Developer Enquiry</p>
-<h3 id="modal-developer-name" class="text-2xl font-display text-gray-900">Developer Name</h3>
-<p class="text-sm text-gray-500">Share your details and our concierge team will connect you with a specialist.</p>
-</div>
-<form id="developer-form" class="space-y-4">
-<input type="hidden" name="developer" id="developer-name-field"/>
-<div>
-<label class="text-sm font-semibold text-gray-700">Full Name</label>
-<input class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary" type="text" name="name" required placeholder="Your Name"/>
-</div>
-<div>
-<label class="text-sm font-semibold text-gray-700">Email</label>
-<input class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary" type="email" name="email" required placeholder="name@email.com"/>
-</div>
-<div>
-<label class="text-sm font-semibold text-gray-700">Phone Number</label>
-<input class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary" type="tel" name="phone" required placeholder="+971 523243879"/>
-</div>
-<div id="developer-form-actions" class="pt-2">
-<button type="submit" class="w-full rounded-2xl bg-primary text-white font-bold py-3 shadow-lg shadow-primary/30 hover:bg-[#c89219] transition-all flex items-center justify-center gap-2">
-<span>Submit</span>
-<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
-</button>
-</div>
-<div id="developer-form-success" class="hidden text-center text-primary font-semibold">Thank you! We will reach out shortly.</div>
-</form>
-</div>
-</div>
-</div>
-</div>
+                    </div>
+                </div>
+            </section>
+            <!-- Filters & Layout -->
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
+                <!-- Filter Chips -->
+                <div class="mb-10 flex flex-wrap items-center justify-center gap-3">
+                    <button
+                        class="group flex h-10 items-center gap-2 rounded-full border border-primary bg-primary/5 px-5 transition-all hover:bg-gray-900">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-primary group-hover:text-white">tune</span>
+                        <span class="text-sm font-bold text-primary group-hover:text-white">All Filters</span>
+                    </button>
+                    <div class="h-8 w-px bg-gray-300 mx-2 hidden sm:block"></div>
+                    <button
+                        class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
+                        <span class="text-sm font-medium text-gray-700 group-hover:text-primary">Downtown Dubai</span>
+                    </button>
+                    <button
+                        class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
+                        <span class="text-sm font-medium text-gray-700 group-hover:text-primary">Dubai Marina</span>
+                    </button>
+                    <button
+                        class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
+                        <span class="text-sm font-medium text-gray-700 group-hover:text-primary">Business Bay</span>
+                    </button>
+                    <button
+                        class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
+                        <span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+                        <span class="text-sm font-medium text-gray-700 group-hover:text-primary">Verified Only</span>
+                    </button>
+                    <button
+                        class="group flex h-10 items-center gap-2 rounded-full border border-gray-200 bg-white px-5 transition-all hover:border-primary hover:bg-primary/5">
+                        <span class="text-sm font-medium text-gray-700 group-hover:text-primary">Luxury
+                            Specialists</span>
+                    </button>
+                </div>
+                <!-- Dynamic Grid -->
+                <div id="developer-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8"></div>
+                <div id="developer-empty" class="hidden text-center py-16 text-gray-500 font-semibold">No developers
+                    match your search.</div>
+            </div>
+            <div id="developer-modal"
+                class="fixed inset-0 bg-black/50 backdrop-blur hidden items-center justify-center z-50 px-4">
+                <div
+                    class="bg-white rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl animate-in fade-in duration-300 relative">
+                    <button id="developer-modal-close" class="absolute top-4 right-4 text-gray-500 hover:text-primary">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <div class="grid md:grid-cols-2">
+                        <div class="hidden md:flex bg-cover bg-center"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZiMhKPZz6O1MJUL1wDxyJHw05WdInMEBFb-crm41JEtxLa6E1NEgTMjA_ZNkXDM0HValQXtQWWv7zUZELtd5zwXPuMz6WJ5RIJ2Cps7e1FqEGa64GECwdTZwm9EYzYilGJoGHKQrjNH97cZVa_WN7k841pFMV01GXSsV3l1tzfge17b4r700wSrmkP00UZeBR5DmCdw-SbGh6pZjVAhsjtVZ_RWb0cWiCMiAGjRbz2MSM_Vudb9S-q3UJpxfkeoSgOAcaThJr9Z0');">
+                        </div>
+                        <div class="p-8 space-y-6">
+                            <div>
+                                <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Developer
+                                    Enquiry</p>
+                                <h3 id="modal-developer-name" class="text-2xl font-display text-gray-900">Developer Name
+                                </h3>
+                                <p class="text-sm text-gray-500">Share your details and our concierge team will connect
+                                    you with a specialist.</p>
+                            </div>
+                            <form id="developer-form" class="space-y-4">
+                                <input type="hidden" name="developer" id="developer-name-field" />
+                                <div>
+                                    <label class="text-sm font-semibold text-gray-700">Full Name</label>
+                                    <input
+                                        class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary"
+                                        type="text" name="name" required placeholder="Your Name" />
+                                </div>
+                                <div>
+                                    <label class="text-sm font-semibold text-gray-700">Email</label>
+                                    <input
+                                        class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary"
+                                        type="email" name="email" required placeholder="name@email.com" />
+                                </div>
+                                <div>
+                            <label class="text-sm font-semibold text-gray-700">Phone Number</label>
+                            <input
+                                class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary"
+                                type="tel" name="phone" required placeholder="Phone (e.g. +971 5x xxx xxxx)" />
+                        </div>
+                        <div>
+                            <label class="text-sm font-semibold text-gray-700">Enquiry Type</label>
+                            <select class="mt-1 w-full rounded-xl border-gray-200 focus:ring-primary focus:border-primary text-gray-600">
+                                <option selected disabled>Select Enquiry Type</option>
+                                <option>Villa</option>
+                                <option>Townhouse</option>
+                                <option>Apartment</option>
+                            </select>
+                        </div>
+                        <div id="developer-form-actions" class="pt-2">
+                            <button type="submit"
+                                class="w-full rounded-2xl bg-primary text-white font-bold py-3 shadow-lg shadow-gray-300 hover:bg-[#c89219] transition-all flex items-center justify-center gap-2">
+                                <span>Submit</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+                                    </button>
+                                </div>
+                                <div id="developer-form-success" class="hidden text-center text-primary font-semibold">
+                                    Thank you! We will reach out shortly.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</main>
-<footer class="bg-background-light pt-20 pb-8 px-4 md:px-12 xl:px-40 border-t border-gray-200">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div class="space-y-6">
-<div class="flex items-center gap-3">
-<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-10 w-auto object-contain drop-shadow" loading="lazy"/>
-<span class="sr-only">Million Dream</span>
-</div>
-<p class="text-gray-500 text-sm leading-relaxed">
-                    Your premier partner for luxury real estate in Dubai. We turn million-dollar dreams into addressable reality.
-                </p>
-<div class="flex gap-4">
-<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
-<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">work</span></a>
-</div>
-</div>
-<div>
-<h4 class="font-bold text-gray-900 mb-6">Explore</h4>
-<ul class="space-y-3 text-sm text-gray-500">
-<li><a class="hover:text-gold transition-colors" href="#">Buy Property</a></li>
-<li><a class="hover:text-gold transition-colors" href="#">Sell Property</a></li>
-<li><a class="hover:text-gold transition-colors" href="#">Off-Plan Projects</a></li>
-<li><a class="hover:text-gold transition-colors" href="#">Property Management</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-gray-900 mb-6">Contact</h4>
-<ul class="space-y-4 text-sm text-gray-500">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-gold mt-0.5">location_on</span>
-<span>Office 205, Sobha Ivory - 1,<br/>Business Bay, Dubai</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-gold">call</span>
-<span>+971 523243879</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-gold">mail</span>
-<span>info@mdre.ae</span>
-</li>
-</ul>
-</div>
-<div class="rounded-xl overflow-hidden h-40 bg-gray-200 relative group">
-<img class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" data-alt="Map location preview" data-location="Dubai Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobA5kGoMYa7_L-9bIaaFYzmkMcAuaiQ-01694pUeiOmTdo9IS-zC16-fWjWGtJuhKY4T-YbHd3FVtArmaBrfyJni9g0FA-sxlY9c-bNYTKfMlKP13f2xJIBEfxKVTdZ0b4ZcvEwHCKB4RKGLEW_OfcKg7r_4UjSP_mILRv6cnF1rPRi3RHV8XuB62_fswTF8kfokqKgdk7xIAQMcsIPEjkGA3SbGyLM-H9f0bGhu3GB6U87eUU7p8WW84xBZJwB_mkxels7Z8NWs"/>
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<a href="https://maps.app.goo.gl/3rJj5vVAGP3dDubai" target="_blank" rel="noopener" class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm inline-flex items-center gap-1">View on Map<span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
-</div>
-</div>
-</div>
-<div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-<p>Ac 2024 Million Dream Real Estate. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-gold" href="privacy-policy.html">Privacy Policy</a>
-<a class="hover:text-gold" href="terms-conditions.html">Terms &amp; Conditions</a>
-<a class="hover:text-gold" href="sitemap.html">Sitemap</a>
-</div>
-<button class="bg-gray-100 p-2 rounded-full hover:bg-gold hover:text-white transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-<span class="material-symbols-outlined text-sm">arrow_upward</span>
-</button>
-</div>
-</footer>
-</div>
-<script>
-        (function () {
-            const header = document.getElementById("main-header");
-            const body = document.body;
-            const currentPage = body.dataset.page;
-            const navLinks = document.querySelectorAll("[data-nav-link]");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const mobileOpenBtn = document.getElementById("mobile-menu-button");
-            const mobileCloseBtn = document.getElementById("mobile-menu-close");
+        </main>
+        <footer class="sharp-theme bg-background-light pt-20 pb-8 px-4 md:px-12 xl:px-40 border-t border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                            class="h-10 w-auto object-contain drop-shadow" loading="lazy" />
+                        <span class="sr-only">Million Dreams</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Your premier partner for luxury real estate in Dubai. We turn million-dollar dreams into
+                        addressable reality.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-gold transition-colors" href="#"><span
+                                class="material-symbols-outlined">public</span></a>
+                        <a class="text-gray-400 hover:text-gold transition-colors" href="#"><span
+                                class="material-symbols-outlined">camera_alt</span></a>
+                        <a class="text-gray-400 hover:text-gold transition-colors" href="#"><span
+                                class="material-symbols-outlined">work</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a class="hover:text-gold transition-colors" href="#">Buy Property</a></li>
+                        <li><a class="hover:text-gold transition-colors" href="#">Sell Property</a></li>
+                        <li><a class="hover:text-gold transition-colors" href="#">Off-Plan Projects</a></li>
+                        <li><a class="hover:text-gold transition-colors" href="#">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-gold mt-0.5">location_on</span>
+                            <span>Office 205, Sobha Ivory - 1,<br />Business Bay, Dubai</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-gold">call</span>
+                            <span>+971 523243879</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-gold">mail</span>
+                            <span>info@mdre.ae</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rounded-xl overflow-hidden h-40 bg-gray-200 relative group">
+                    <img class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                        data-alt="Map location preview" data-location="Dubai Map"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobA5kGoMYa7_L-9bIaaFYzmkMcAuaiQ-01694pUeiOmTdo9IS-zC16-fWjWGtJuhKY4T-YbHd3FVtArmaBrfyJni9g0FA-sxlY9c-bNYTKfMlKP13f2xJIBEfxKVTdZ0b4ZcvEwHCKB4RKGLEW_OfcKg7r_4UjSP_mILRv6cnF1rPRi3RHV8XuB62_fswTF8kfokqKgdk7xIAQMcsIPEjkGA3SbGyLM-H9f0bGhu3GB6U87eUU7p8WW84xBZJwB_mkxels7Z8NWs" />
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <a href="https://maps.app.goo.gl/3rJj5vVAGP3dDubai" target="_blank" rel="noopener"
+                            class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm inline-flex items-center gap-1">View
+                            on Map<span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                <p>Ac 2024 Million Dreams Real Estate. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-gold" href="privacy-policy.html">Privacy Policy</a>
+                    <a class="hover:text-gold" href="terms-conditions.html">Terms &amp; Conditions</a>
+                    <a class="hover:text-gold" href="sitemap.html">Sitemap</a>
+                </div>
+                <button class="bg-gray-100 p-2 rounded-full hover:bg-gold hover:text-white transition-colors"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                    <span class="material-symbols-outlined text-sm">arrow_upward</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script>
+            (function () {
+                const header = document.getElementById("main-header");
+                const body = document.body;
+                const currentPage = body.dataset.page;
+                const navLinks = document.querySelectorAll("[data-nav-link]");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const mobileOpenBtn = document.getElementById("mobile-menu-button");
+                const mobileCloseBtn = document.getElementById("mobile-menu-close");
 
-            const setLinkState = () => {
-                navLinks.forEach((link) => {
-                    const isActive = link.dataset.navLink === currentPage;
-                    const muted = link.dataset.navMuted;
-                    if (isActive) {
-                        if (muted) link.classList.remove(muted);
-                        link.classList.add("bg-primary", "text-white", "shadow-lg", "shadow-primary/30");
-                    } else {
-                        link.classList.remove("bg-primary", "text-white", "shadow-lg", "shadow-primary/30");
-                        if (muted && !link.classList.contains(muted)) {
-                            link.classList.add(muted);
+                const setLinkState = () => {
+                    navLinks.forEach((link) => {
+                        const isActive = link.dataset.navLink === currentPage;
+                        const muted = link.dataset.navMuted;
+                        if (isActive) {
+                            if (muted) link.classList.remove(muted);
+                            link.classList.add("bg-gray-900", "text-white", "shadow-lg", "shadow-gray-300");
+                        } else {
+                            link.classList.remove("bg-gray-900", "text-white", "shadow-lg", "shadow-gray-300");
+                            if (muted && !link.classList.contains(muted)) {
+                                link.classList.add(muted);
+                            }
                         }
-                    }
-                });
-            };
-
-            const setMenuState = (open) => {
-                if (!mobileMenu) return;
-                mobileMenu.classList.toggle("translate-x-0", open);
-                mobileMenu.classList.toggle("translate-x-full", !open);
-                body.classList.toggle("overflow-hidden", open);
-                mobileOpenBtn?.setAttribute("aria-expanded", open);
-            };
-
-            mobileOpenBtn?.addEventListener("click", () => {
-                const isOpen = mobileOpenBtn.getAttribute("aria-expanded") === "true";
-                setMenuState(!isOpen);
-            });
-
-            mobileCloseBtn?.addEventListener("click", () => setMenuState(false));
-            mobileMenu?.querySelectorAll("a")?.forEach((link) =>
-                link.addEventListener("click", () => setMenuState(false))
-            );
-
-            if (header) {
-                const toggleHeaderState = () => {
-                    const isSticky = window.scrollY > 10;
-                    header.classList.toggle("shadow-xl", isSticky);
-                    header.classList.toggle("border-b", isSticky);
-                    header.classList.toggle("border-gold/20", isSticky);
-                    header.classList.toggle("bg-white/95", isSticky);
-                    header.classList.toggle("backdrop-blur-md", isSticky);
+                    });
                 };
-                toggleHeaderState();
-                window.addEventListener("scroll", toggleHeaderState, {passive: true});
-            }
 
-            setLinkState();
-        })();
+                const setMenuState = (open) => {
+                    if (!mobileMenu) return;
+                    mobileMenu.classList.toggle("translate-x-0", open);
+                    mobileMenu.classList.toggle("translate-x-full", !open);
+                    body.classList.toggle("overflow-hidden", open);
+                    mobileOpenBtn?.setAttribute("aria-expanded", open);
+                };
+
+                mobileOpenBtn?.addEventListener("click", () => {
+                    const isOpen = mobileOpenBtn.getAttribute("aria-expanded") === "true";
+                    setMenuState(!isOpen);
+                });
+
+                mobileCloseBtn?.addEventListener("click", () => setMenuState(false));
+                mobileMenu?.querySelectorAll("a")?.forEach((link) =>
+                    link.addEventListener("click", () => setMenuState(false))
+                );
+
+                if (header) {
+                    const toggleHeaderState = () => {
+                        const isSticky = window.scrollY > 10;
+                        header.classList.toggle("shadow-xl", isSticky);
+                        header.classList.toggle("border-b", isSticky);
+                        header.classList.toggle("border-gray-200", isSticky);
+                        header.classList.toggle("bg-white/95", isSticky);
+                        header.classList.toggle("backdrop-blur-md", isSticky);
+                    };
+                    toggleHeaderState();
+                    window.addEventListener("scroll", toggleHeaderState, { passive: true });
+                }
+
+                setLinkState();
+            })();
 
         const developerLogos = [
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCrYoQ8xrBJvMzdQOPFpnn_pQIxcLrYcwczyF3qTrt9fdcbDTP2FOuZKEt2lOLO2hep0jsTi5J2bsoja4YtN4ur0K9Nys9NOG15yBld3iPlSHRbtsRTHoQA77hTbGkm39VuFncL5ucpo_ZccuIwTr3ywHT8uozS-5CAv_D_qckUtC6NrYBwUlV9pVQxP6jiH4lL7y6psQMEsJmM7iQVLFlFSgavj1VJFPlwglnl6CW6e0h1fXQg873Yl3ueV4fulD0gXSXT5EM86ZVr",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCI278mFS69mXxbs4DK-hT9Ki7lPdqo0tJ1ymoP_tqYZfpOdL0b_0M7nj1GOBZgJuLB_k7oESjHzA_1_GxQD2zTN8cB972hHzaxP5tEtrxdCsnV04I24cpFiqJcuFl3hd-0HbuQ4FHO5PMrAPjsOB5xqkybY4FGugQhjUiPEv6RRBzs5CRev9YnJ23h8t7TaiMetY61F6Nz9ZdX2tnpxyqJ34W6oVyT3fwvg9q5vvfY575dLIsJlgQk2M_e2mf1b1u77kteLlsNDv4S",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCOmQ5qzV4TBN4EdMtzyAbV5dWPbc6LvgrAyYr7AGchWPOc2fnSWrQJ-wTYmnvjZO66IwSejI_HWSyoj_5m8rKxyXc5AjE9IINuOqST1qAIq_4Pu0rIEV0tWsWtE-bapQ8u05RjkoXYtnykF8--xSWJZjuyt5PfWuyD2-h4QxB6sotW4m8WrL-poQesD4k4LXytJ0oLhZnIRikAAl4pEFZzICHnXqxaRR29OgXo6BRYlF0LzhTRNqkpigX4lVmGJqZNxRE3OpZo1Oc6",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuAXaOzlI9FFsbTWXwoBEcNXNNHG__1qhwHTs8hwIJHrBzhxqYw0uIx68pZLYuHulr6bJQ7LZCaOHXT-DmYv8ebui-gDbYnzudeZg3eFmNSYnNL508L-O5KLCxEAxze5ZwA9WGZoTt2EoyCJB0WhlLyllXbr36OBeeSUq4XnUuRbUnaxSE3hXq-B1tRyHkHXyzGd6vN-zwBsuG1ytnZzix5nUEk4phvVZ6O8UDHSukY_5IsBzJvVnLwYJ-bkbE8LMkPAuFRfZYcnsQ0P",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCCxvXGKnK1qnEt8t4ZCoW3vtazBoPJvs7dMLPEU33lKch3_GnsMjOmB7m5w_X4Yg5AzzVakfZdK_JzWhVfMmgncR9T4eCX6R3di5C0Ms4ZT5nkt2mBQS-X9DfZMviEwmKYr0WHWScBLFGwMSx_1ckHfnNe8oy6t_B3r7a0H86ewtxTB9QwqN6y0ihW9D3qMPPctb5F_4hjoF4gQ9YP-SL94znbvYPdamOqoP_gryC-TA09dOG0AVxiPb33IIyvEmTIcNoCVESDf-Kk",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuAIlzKQHZQYais_-dZPQt9cus0zJAFqv0HVyJhCpnQwu9mRVinCr8qaTzyeB2mLuEhRbfuuEeGitRqZMR9YJWGaMywDbbpIbU-87t6utgJoIPvp6yoGEe6nPsXW1yH8o-YtkaRsY4PxZ1KTTTBIep6aYmKSv-95Ie9x0SGghzKlpQZic-0TfuGe6_vXLGgC8rSPXpFa9z9fRL0ODu5zTQAhoK71SmZWg5-gn5nxwVF3aRgk6SJQ8TYYKCxT-Ux87ux0opQRCCQnbihS"
+            "assets/dubai-developer-logos/Emaar.png",
+            "assets/dubai-developer-logos/Wasl Properties.png",
+            "assets/dubai-developer-logos/Aldar.png",
+            "assets/dubai-developer-logos/Nshama.png",
+            "assets/dubai-developer-logos/Dubai South.png",
+            "assets/dubai-developer-logos/Nakheel.png",
+            "assets/dubai-developer-logos/Azizi.png",
+            "assets/dubai-developer-logos/Binghatti.png",
+            "assets/dubai-developer-logos/BNW Developments.png",
+            "assets/dubai-developer-logos/Damac.png",
+            "assets/dubai-developer-logos/Danube.png",
+            "assets/dubai-developer-logos/Ellington.png",
+            "assets/dubai-developer-logos/Imtiaz Development.png",
+            "assets/dubai-developer-logos/Meeras.png",
+            "assets/dubai-developer-logos/Omniyat.png",
+            "assets/dubai-developer-logos/Sobha.png"
         ];
 
         const developersData = [
-            {name: "Emaar Properties", location: "Downtown Dubai", focus: "Global Powerhouse", description: "A global powerhouse and one of Dubai’s most iconic developers, Emaar is behind landmark destinations, master communities, and world-class residential and commercial projects. Their experience, brand trust, and proven track record make them the go-to for investors seeking stability, quality, and premium lifestyle.", tag: "Premium Lifestyle"},
-            {name: "Wasl Properties", location: "Dubai", focus: "Local Expertise", description: "A well-known Dubai real estate and property management firm with a strong local presence. Wasl maintains a diversified portfolio across residential, commercial, and leasing services, offering reliable tenancy experiences for residents and businesses alike.", tag: "Property Management"},
-            {name: "Aldar Properties", location: "Abu Dhabi • Dubai", focus: "Institutional Scale", description: "Leading UAE developer delivering large-scale, high-quality communities across Abu Dhabi and Dubai. Strength lies in stability, long-term value, and robust infrastructure—ideal for investors seeking reliable returns and sustainable living environments.", tag: "Long-term Value"},
-            {name: "Nshama", location: "Town Square Dubai", focus: "Family Communities", description: "A modern developer focused on master-planned, family-friendly communities that blend stylish yet affordable homes with integrated amenities, green spaces, and community lifestyle hubs. Known for Town Square Dubai and everyday value.", tag: "Community Living"},
-            {name: "Dubai South", location: "Dubai South District", focus: "Future Growth", description: "A master-planned urban district supporting integrated living by combining residential, business, logistics, and leisure developments into one growth hub. Perfect for buyers looking at long-term growth, infrastructure, and connectivity.", tag: "Growth Hub"},
-            {name: "Nakheel Properties", location: "Palm Jumeirah", focus: "Iconic Waterfronts", description: "The visionary master developer behind many of Dubai’s waterfront and island landmarks, shaping the skyline with ambitious coastal living ideas. Offers unique lifestyle appeal plus enduring asset value.", tag: "Waterfront Living"},
-            {name: "Azizi Developments", location: "Meydan • Al Furjan", focus: "Value Residences", description: "Creates modern, affordable-to-midrange residential projects in strategic, high-demand areas. Favored by investors for strong value propositions and healthy rental potential.", tag: "Investor Friendly"},
-            {name: "Binghatti Developers", location: "JVC • Business Bay", focus: "Design Forward", description: "Known for bold architecture and contemporary aesthetics, Binghatti delivers stylish residential towers with functional layouts. Appeals to buyers seeking trendy, design-forward homes at accessible prices.", tag: "Statement Design"},
-            {name: "BNW Developments", location: "Dubai", focus: "Boutique Luxury", description: "A premium-focused developer emphasizing bespoke, design-centric projects. Their portfolio combines elegance and modernity, reflecting a commitment to exclusivity and craft.", tag: "Bespoke Quality"},
-            {name: "DAMAC Properties", location: "Business Bay • Dubai Marina", focus: "Luxury Lifestyle", description: "A globally recognized name delivering high-end residential, commercial, and mixed-use developments, frequently with branded finishes. Ideal for lifestyle-oriented buyers who value premium amenities and brand cachet.", tag: "Branded Luxury"},
-            {name: "Danube Properties", location: "Al Furjan • JLT", focus: "Accessible Ownership", description: "Combines affordability with comfort through flexible payment plans (such as 1% monthly), modern design, and reliable delivery. Appeals to first-time buyers and investors alike.", tag: "Flexible Plans"},
-            {name: "Ellington Properties", location: "Dubai Hills • Palm", focus: "Design-Led Luxury", description: "A boutique developer known for international aesthetics, refined finishes, and meticulous attention to detail. Crafted for buyers seeking premium quality and architectural sophistication.", tag: "Design-Centric"},
-            {name: "Imtiyaz Development", location: "Dubai", focus: "Balanced Value", description: "Creates modern residential projects with competitive pricing, delivering balanced quality for buyers prioritizing value without sacrificing comfort.", tag: "Value Modern"},
-            {name: "Meeras", location: "City Walk • Bluewaters", focus: "Lifestyle Districts", description: "Delivers stylish developments that blend residential, retail, and leisure components to create integrated urban lifestyles. Ideal for buyers wanting convenience-driven communities.", tag: "Urban Lifestyle"},
-            {name: "Omniyat", location: "Business Bay • Palm", focus: "Ultra Luxury", description: "Celebrated for high-end architectural statements in elite addresses. Omniyat’s residences spotlight design innovation, luxury finishes, and exclusivity.", tag: "Signature Luxury"},
-            {name: "Sobha Realty", location: "Sobha Hartland", focus: "Craftsmanship", description: "Globally respected for impeccable construction across villas, apartments, and mixed-use projects. Their integrated in-house model ensures quality control, precision, and trust.", tag: "Engineered Quality"}
+            { name: "Emaar Properties", location: "Downtown Dubai", focus: "Global Powerhouse", description: "A global powerhouse and one of Dubai's most iconic developers, Emaar is behind landmark destinations, master communities, and world-class residential and commercial projects. Their experience, brand trust, and proven track record make them the go-to for investors seeking stability, quality, and premium lifestyle.", tag: "Premium Lifestyle" },
+            { name: "Wasl Properties", location: "Dubai", focus: "Local Expertise", description: "A well-known Dubai real estate and property management firm with a strong local presence. Wasl maintains a diversified portfolio across residential, commercial, and leasing services, offering reliable tenancy experiences for residents and businesses alike.", tag: "Property Management" },
+            { name: "Aldar Properties", location: "Abu Dhabi & Dubai", focus: "Institutional Scale", description: "Leading UAE developer delivering large-scale, high-quality communities across Abu Dhabi and Dubai. Strength lies in stability, long-term value, and robust infrastructure-ideal for investors seeking reliable returns and sustainable living environments.", tag: "Long-term Value" },
+            { name: "Nshama", location: "Town Square Dubai", focus: "Family Communities", description: "A modern developer focused on master-planned, family-friendly communities that blend stylish yet affordable homes with integrated amenities, green spaces, and community lifestyle hubs. Known for Town Square Dubai and everyday value.", tag: "Community Living" },
+            { name: "Dubai South", location: "Dubai South District", focus: "Future Growth", description: "A master-planned urban district supporting integrated living by combining residential, business, logistics, and leisure developments into one growth hub. Perfect for buyers looking at long-term growth, infrastructure, and connectivity.", tag: "Growth Hub" },
+            { name: "Nakheel Properties", location: "Palm Jumeirah", focus: "Iconic Waterfronts", description: "The visionary master developer behind many of Dubai's waterfront and island landmarks, shaping the skyline with ambitious coastal living ideas. Offers unique lifestyle appeal plus enduring asset value.", tag: "Waterfront Living" },
+            { name: "Azizi Developments", location: "Meydan & Al Furjan", focus: "Value Residences", description: "Creates modern, affordable-to-midrange residential projects in strategic, high-demand areas. Favored by investors for strong value propositions and healthy rental potential.", tag: "Investor Friendly" },
+            { name: "Binghatti Developers", location: "JVC & Business Bay", focus: "Design Forward", description: "Known for bold architecture and contemporary aesthetics, Binghatti delivers stylish residential towers with functional layouts. Appeals to buyers seeking trendy, design-forward homes at accessible prices.", tag: "Statement Design" },
+            { name: "BNW Developments", location: "Dubai", focus: "Boutique Luxury", description: "A premium-focused developer emphasizing bespoke, design-centric projects. Their portfolio combines elegance and modernity, reflecting a commitment to exclusivity and craft.", tag: "Bespoke Quality" },
+            { name: "DAMAC Properties", location: "Business Bay & Dubai Marina", focus: "Luxury Lifestyle", description: "A globally recognized name delivering high-end residential, commercial, and mixed-use developments, frequently with branded finishes. Ideal for lifestyle-oriented buyers who value premium amenities and brand cachet.", tag: "Branded Luxury" },
+            { name: "Danube Properties", location: "Al Furjan & JLT", focus: "Accessible Ownership", description: "Combines affordability with comfort through flexible payment plans (such as 1% monthly), modern design, and reliable delivery. Appeals to first-time buyers and investors alike.", tag: "Flexible Plans" },
+            { name: "Ellington Properties", location: "Dubai Hills & Palm", focus: "Design-Led Luxury", description: "A boutique developer known for international aesthetics, refined finishes, and meticulous attention to detail. Crafted for buyers seeking premium quality and architectural sophistication.", tag: "Design-Centric" },
+            { name: "Imtiyaz Development", location: "Dubai", focus: "Balanced Value", description: "Creates modern residential projects with competitive pricing, delivering balanced quality for buyers prioritizing value without sacrificing comfort.", tag: "Value Modern" },
+            { name: "Meeras", location: "City Walk & Bluewaters", focus: "Lifestyle Districts", description: "Delivers stylish developments that blend residential, retail, and leisure components to create integrated urban lifestyles. Ideal for buyers wanting convenience-driven communities.", tag: "Urban Lifestyle" },
+            { name: "Omniyat", location: "Business Bay & Palm", focus: "Ultra Luxury", description: "Celebrated for high-end architectural statements in elite addresses. Omniyat's residences spotlight design innovation, luxury finishes, and exclusivity.", tag: "Signature Luxury" },
+            { name: "Sobha Realty", location: "Sobha Hartland", focus: "Craftsmanship", description: "Globally respected for impeccable construction across villas, apartments, and mixed-use projects. Their integrated in-house model ensures quality control, precision, and trust.", tag: "Engineered Quality" }
         ];
 
         const gridEl = document.getElementById("developer-grid");
@@ -360,9 +475,9 @@
                     const logo = developerLogos[idx % developerLogos.length];
                     return `
                         <div class="group relative flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-100 transition-all hover:-translate-y-1 hover:shadow-xl">
-                            <div class="flex items-start gap-4">
-                                <div class="flex h-16 w-16 items-center justify-center rounded-full bg-gray-50 p-1 shadow-inner">
-                                    <img src="${logo}" alt="${developer.name} logo" class="h-full w-full rounded-full object-cover"/>
+                            <div class="items-start gap-4">
+                                <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full bg-gray-50 p-2 mb-2 shadow-inner">
+                                    <img src="${logo}" alt="${developer.name} logo" class="max-h-full max-w-full object-cover" style="height:200px; width:200px;" loading="lazy"/>
                                 </div>
                                 <div>
                                     <p class="text-xs font-semibold uppercase tracking-[0.3em] text-primary/70">${developer.focus}</p>
@@ -473,11 +588,11 @@
         const navigateTo = (destination) => {
             if (!destination) return;
             if (destination.startsWith("#")) {
-                document.querySelector(destination)?.scrollIntoView({behavior: "smooth"});
+                document.querySelector(destination)?.scrollIntoView({ behavior: "smooth" });
                 return;
             }
             if (destination.includes("contact-us.html#contact-form") && /contact-us\\.html$/i.test(window.location.pathname)) {
-                document.querySelector("#contact-form")?.scrollIntoView({behavior: "smooth"});
+                document.querySelector("#contact-form")?.scrollIntoView({ behavior: "smooth" });
                 return;
             }
             window.location.href = destination;
@@ -490,4 +605,14 @@
             });
         });
     </script>
-</body></html>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

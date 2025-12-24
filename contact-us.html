@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Million Dream - Contact</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Bogle:wght@400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.cdnfonts.com/css/bbh-bogle" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Million Dreams - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bogle:wght@400&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/bbh-bogle" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#e0ac24",
-                        "gold": "#e0ac24",
+                        "primary": "#111827",
+                        "gold": "#111827",
                         "background-light": "#fcf8f8",
                         "background-dark": "#211111",
                         "surface": "#ffffff",
@@ -27,370 +33,482 @@
                         "display": ["Italiana", "serif"],
                         "body": ["Manrope", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "4xl": "2.5rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "4xl": "2.5rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<link href="style.css" rel="stylesheet"/>
+
+    <style>
+        :root {
+            --primary: #111827;
+            --gold: #111827;
+        }
+
+        body.sharp-theme [class*="rounded"] {
+            border-radius: 3px !important;
+        }
+
+        body.sharp-theme .rounded-full {
+            border-radius: 3px !important;
+        }
+    </style>
 </head>
-<body data-page="contact" class="bg-background-light text-[#1b0e0e] font-body antialiased overflow-x-hidden selection:bg-gold/30">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Navigation -->
-<header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
-<div class="px-4 md:px-8 lg:px-12 xl:px-20 py-8 flex items-center gap-6 w-full">
-<div class="flex items-center gap-3 group cursor-pointer shrink-0">
-<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-16 w-auto object-contain drop-shadow-lg" loading="lazy"/>
-<span class="sr-only">Million Dream</span>
-</div>
-<nav class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
-<a data-nav-link="home" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="index.html">Home</a>
-<a data-nav-link="about" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="about-us.html">About</a>
-<a data-nav-link="developers" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="developer.html">Developers</a>
-<a data-nav-link="contact" data-nav-muted="text-primary/70" class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all" href="contact-us.html" aria-current="page">Contact</a>
-</nav>
-<div class="flex items-center gap-4">
-<a class="hidden md:inline-flex items-center gap-2 bg-white/80 border border-[#25D366]/40 text-[#1d7a4a] px-6 py-3 rounded-2xl text-sm md:text-base font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all min-w-[150px] justify-center" href="https://wa.me/971523243879" target="_blank" rel="noopener">
-<span class="material-symbols-outlined text-[18px]">chat</span>
-<span>WhatsApp</span>
-</a>
-<button type="button" data-link="contact" class="bg-gradient-to-r from-primary to-[#f4ce5d] hover:from-[#c38a13] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[150px] justify-center">
-<span>Enquire</span>
-<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
-</button>
-<button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-2 text-gray-900">
-<span class="material-symbols-outlined text-[28px]">menu</span>
-</button>
-</div>
-</div>
-</header>
-<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-3">
-<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-12 w-auto object-contain drop-shadow-lg" loading="lazy"/>
-<span class="sr-only">Million Dream</span>
-</div>
-<button id="mobile-menu-close" class="p-2 text-gray-900">
-<span class="material-symbols-outlined text-[28px]">close</span>
-</button>
-</div>
-<nav class="flex flex-col gap-3 text-base font-semibold">
-<a data-nav-link="home" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="index.html">Home</a>
-<a data-nav-link="about" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="about-us.html">About</a>
-<a data-nav-link="developers" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="developer.html">Developers</a>
-<a data-nav-link="contact" data-nav-muted="text-primary/80" class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="contact-us.html">Contact</a>
-</nav>
-<div class="flex flex-col gap-3">
-<a class="inline-flex items-center justify-center gap-2 bg-white border border-[#25D366]/40 text-[#1d7a4a] px-4 py-3 rounded-2xl font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all" href="https://wa.me/971523243879" target="_blank" rel="noopener">
-<span class="material-symbols-outlined text-[18px]">chat</span>
-<span>WhatsApp</span>
-</a>
-<button type="button" data-link="contact" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#f4ce5d] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-primary/30 transition-all">
-<span>Enquire</span>
-<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
-</button>
-</div>
-</div>
-<a href="https://wa.me/971523243879" target="_blank" rel="noopener" class="fixed bottom-6 right-4 md:right-8 z-40 inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-4 py-3 rounded-full shadow-xl shadow-[#25D366]/40 hover:bg-[#128C7E] transition-transform hover:-translate-y-0.5">
-<span class="material-symbols-outlined text-[20px]">chat</span>
-<span class="text-sm">WhatsApp</span>
-</a>
-<main class="flex flex-col flex-1 w-full">
-<!-- Hero Section -->
-<section class="relative w-full py-20 px-5 md:px-20 lg:px-40 flex flex-col items-center justify-center text-center">
-<div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5YcUFcjFPU7q9mL2L0i0suWfMlNV0wkX_g2d6eODwEbWxEc17sQoUUmqrJXHNw47UqYSsmr7-uHKlbkBOpPpQR-XKXHa5M1Tp3k2LAjKzvuI8ZswEyXMIaYLKFtRItAViIlw24d3tSfSIkyqFcinWbL8oYOsESzSzTx49tIvhfuYhN2tpPsoZRweo0QufhfH63OZTmLYGUhw-3ErrxkrZn6Bo62gJRYwfitR5h23a0_WDXVjyz3VApLOIxrFdH1rKWdJfw0K-vYO4');"></div>
-<div class="max-w-3xl relative z-10 flex flex-col gap-6">
-<span class="uppercase tracking-[0.2em] text-xs font-bold text-primary">Private Concierge</span>
-<h1 class="text-4xl md:text-6xl font-display leading-tight text-gray-900">
-                    Speak with Dubai's <br/> <span class="text-primary">Premier Developers</span>
-</h1>
-<p class="text-lg text-gray-500 font-light max-w-xl mx-auto">
-                    Schedule a bespoke consultation with Million Dream to discover curated residences, investment launches, and developer partnerships across the UAE.
-                </p>
-</div>
-</section>
-<!-- Quick Connect Cards -->
-<section class="w-full px-5 md:px-10 max-w-7xl mx-auto -mt-8 mb-20 relative z-20">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Card 1 -->
-<div class="group flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-xl shadow-soft border border-transparent hover:border-primary/20 transition-all duration-300">
-<div class="size-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">chat</span>
-</div>
-<h3 class="text-xl font-bold">Concierge WhatsApp</h3>
-<p class="text-center text-gray-500 text-sm">Instant updates on show suites, brochures, and private viewing slots.</p>
-<a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all" href="#">
-                        Start Chat <span class="material-symbols-outlined text-base">arrow_forward</span>
-</a>
-</div>
-<!-- Card 2 -->
-<div class="group flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-xl shadow-soft border border-transparent hover:border-primary/20 transition-all duration-300">
-<div class="size-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">mail</span>
-</div>
-<h3 class="text-xl font-bold">General Enquiries</h3>
-<p class="text-center text-gray-500 text-sm">For partnership opportunities, press briefings, and project collaborations.</p>
-<a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all" href="#">
-                        Email Us <span class="material-symbols-outlined text-base">arrow_forward</span>
-</a>
-</div>
-<!-- Card 3 -->
-<div class="group flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-xl shadow-soft border border-transparent hover:border-primary/20 transition-all duration-300">
-<div class="size-14 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">location_on</span>
-</div>
-<h3 class="text-xl font-bold">Visit HQ</h3>
-<p class="text-center text-gray-500 text-sm">Business Bay, Sobha Ivory - 1, Office 205.</p>
-<a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all" href="#">
-                        Get Directions <span class="material-symbols-outlined text-base">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Main Form & Map Section -->
-<section class="w-full bg-white py-20">
-<div class="max-w-7xl mx-auto px-5 md:px-10">
-<div class="flex flex-col lg:flex-row gap-16">
-<!-- Left: Form -->
-<div class="flex-1 flex flex-col gap-8">
-<div>
-<h2 class="text-4xl font-display text-gray-900 leading-tight mb-4">Send a Message</h2>
-<p class="text-gray-500">Tell us what you’re looking for and our developer liaison desk will reply within 24 hours with tailored options.</p>
-</div>
-<form id="contact-form" class="flex flex-col gap-6">
-<div class="flex flex-col md:flex-row gap-6">
-<label class="flex-1 flex flex-col gap-2">
-<span class="text-sm font-bold text-gray-900">Full Name</span>
-<input class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm" placeholder="e.g. Sheikh Mohammed" type="text"/>
-</label>
-<label class="flex-1 flex flex-col gap-2">
-<span class="text-sm font-bold text-gray-900">Company</span>
-<input class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm" placeholder="Developer Name LLC" type="text"/>
-</label>
-</div>
-<div class="flex flex-col md:flex-row gap-6">
-<label class="flex-1 flex flex-col gap-2">
-<span class="text-sm font-bold text-gray-900">Email Address</span>
-<input class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm" placeholder="name@company.com" type="email"/>
-</label>
-<label class="flex-1 flex flex-col gap-2">
-<span class="text-sm font-bold text-gray-900">Phone Number</span>
-<input class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm" placeholder="+971 523243879" type="tel"/>
-</label>
-</div>
-<label class="flex flex-col gap-2">
-<span class="text-sm font-bold text-gray-900">Enquiry Type</span>
-<select class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors text-gray-500 text-sm">
-<option>General Inquiry</option>
-<option>Private Viewing / Launch Invite</option>
-<option>Developer Partnership</option>
-<option>Press & Media</option>
-</select>
-</label>
-<label class="flex flex-col gap-2">
-<span class="text-sm font-bold text-gray-900">Message</span>
-<textarea class="w-full rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm p-4 resize-none" placeholder="How can we assist you today?" rows="4"></textarea>
-</label>
-<button class="mt-4 h-14 w-full md:w-auto md:min-w-[200px] self-start rounded-full bg-primary text-white font-bold text-sm tracking-wide uppercase hover:bg-[#c38a13] transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2" type="submit">
-<span>Submit Enquiry</span>
-<span class="material-symbols-outlined text-lg">send</span>
-</button>
-</form>
-</div>
-<!-- Right: Map & Info -->
-<div class="flex-1 flex flex-col gap-8">
-<div class="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-soft group">
-<!-- Map Placeholder -->
-<div class="absolute inset-0 bg-gray-200 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-location="Dubai Downtown Map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb9tbv1I6gdCzE4cV9GeotUhSsUyFipvIcBPUIlVhX85MxGSx3XOo8BCMHVOpNbGOCqGr5tfn66WRXf2VIqMv-WOiUbCgFgpZPyiOACj9bAOX97jzvWrmi8IMwqx_OHwJit3Qewm5b2OTuoyFNuNd4LTW-873QyHy6dbMSy7wOhdy6Wkr4LmQirFXwL5If2PMNYjzoizCFZaan-vH-XNzyMZgo2WmtK_w6oogMT4gbxGwF4kSh9kfUuwyoZ1K_O-dW7kekQ_8cJZ_f"); filter: grayscale(100%) contrast(1.1);'>
-</div>
-<!-- Custom Pin Overlay -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-<div class="size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/40 animate-bounce">
-<span class="material-symbols-outlined text-2xl">apartment</span>
-</div>
-<div class="mt-2 bg-white px-3 py-1 rounded-full text-xs font-bold shadow-md whitespace-nowrap">HQ • Business Bay</div>
-</div>
-<div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur rounded-xl p-4 shadow-sm border border-gray-100">
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">pin_drop</span>
-<div>
-<p class="text-sm font-bold text-gray-900">Million Dream HQ</p>
-<p class="text-xs text-gray-500 mt-1">Office 205, Sobha Ivory - 1<br/>Business Bay, Dubai, UAE</p>
-</div>
-</div>
-</div>
-</div>
-<!-- FAQ Accordion (Simple) -->
-<div class="flex flex-col gap-4">
-<h3 class="text-xl font-display font-medium">Common Questions</h3>
-<div class="border-b border-gray-100 pb-4">
-<details class="group">
-<summary class="flex cursor-pointer items-center justify-between font-medium text-gray-900 list-none">
-<span>How do I request a private developer presentation?</span>
-<span class="transition group-open:rotate-180">
-<span class="material-symbols-outlined">expand_more</span>
-</span>
-</summary>
-<p class="group-open:animate-fadeIn mt-3 text-sm text-gray-500 leading-relaxed">
-                                         Submit the form with “Private Presentation” in the enquiry type. Our concierge will coordinate a session with the relevant developer team within 24 hours.
-                                     </p>
-</details>
-</div>
-<div class="border-b border-gray-100 pb-4">
-<details class="group">
-<summary class="flex cursor-pointer items-center justify-between font-medium text-gray-900 list-none">
-<span>Is there a fee for your advisory service?</span>
-<span class="transition group-open:rotate-180">
-<span class="material-symbols-outlined">expand_more</span>
-</span>
-</summary>
-<p class="group-open:animate-fadeIn mt-3 text-sm text-gray-500 leading-relaxed">
-                                         Consultations for buyers and investors are complimentary. Developers engage us through bespoke marketing and launch partnerships, keeping the service free for clients.
-                                     </p>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Image Gallery Strip -->
-<section class="w-full py-10 bg-background-light">
-<div class="max-w-7xl mx-auto px-5 md:px-10">
-<p class="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-8">Trusted by the Elite</p>
-<div class="flex justify-center flex-wrap gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<!-- Abstract Logo Representations using Text for demo -->
-<div class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">EMAAR</div>
-<div class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">DAMAC</div>
-<div class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">NAKHEEL</div>
-<div class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">MERAAS</div>
-<div class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">SOBHA</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-background-light pt-20 pb-8 px-4 md:px-12 xl:px-40 border-t border-gray-200">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div class="space-y-6">
-<div class="flex items-center gap-3">
-<img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dream logo" class="h-10 w-auto object-contain drop-shadow" loading="lazy"/>
-<span class="sr-only">Million Dream</span>
-</div>
-<p class="text-gray-500 text-sm leading-relaxed">
-                    Your premier partner for luxury real estate in Dubai. We turn million-dollar dreams into addressable reality.
-                </p>
-<div class="flex gap-4">
-<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
-<a class="text-gray-400 hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">work</span></a>
-</div>
-</div>
-<div>
-<h4 class="font-bold text-gray-900 mb-6">Explore</h4>
-<ul class="space-y-3 text-sm text-gray-500">
-<li><a class="hover:text-gold transition-colors" href="#">Buy Property</a></li>
-<li><a class="hover:text-gold transition-colors" href="#">Sell Property</a></li>
-<li><a class="hover:text-gold transition-colors" href="#">Off-Plan Projects</a></li>
-<li><a class="hover:text-gold transition-colors" href="#">Property Management</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-gray-900 mb-6">Contact</h4>
-<ul class="space-y-4 text-sm text-gray-500">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-gold mt-0.5">location_on</span>
-<span>Office 205, Sobha Ivory - 1,<br/>Business Bay, Dubai</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-gold">call</span>
-<span>+971 523243879</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-gold">mail</span>
-<span>info@mdre.ae</span>
-</li>
-</ul>
-</div>
-<div class="rounded-xl overflow-hidden h-40 bg-gray-200 relative group">
-<img class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" data-alt="Map location preview" data-location="Dubai Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobA5kGoMYa7_L-9bIaaFYzmkMcAuaiQ-01694pUeiOmTdo9IS-zC16-fWjWGtJuhKY4T-YbHd3FVtArmaBrfyJni9g0FA-sxlY9c-bNYTKfMlKP13f2xJIBEfxKVTdZ0b4ZcvEwHCKB4RKGLEW_OfcKg7r_4UjSP_mILRv6cnF1rPRi3RHV8XuB62_fswTF8kfokqKgdk7xIAQMcsIPEjkGA3SbGyLM-H9f0bGhu3GB6U87eUU7p8WW84xBZJwB_mkxels7Z8NWs"/>
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<a href="https://maps.app.goo.gl/3rJj5vVAGP3dDubai" target="_blank" rel="noopener" class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm inline-flex items-center gap-1">View on Map<span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
-</div>
-</div>
-</div>
-<div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-<p>Ac 2024 Million Dream Real Estate. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-gold" href="privacy-policy.html">Privacy Policy</a>
-<a class="hover:text-gold" href="terms-conditions.html">Terms &amp; Conditions</a>
-<a class="hover:text-gold" href="sitemap.html">Sitemap</a>
-</div>
-<button class="bg-gray-100 p-2 rounded-full hover:bg-gold hover:text-white transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-<span class="material-symbols-outlined text-sm">arrow_upward</span>
-</button>
-</div>
-</footer>
-</div>
-<script>
-        (function () {
-            const header = document.getElementById("main-header");
-            const body = document.body;
-            const currentPage = body.dataset.page;
-            const navLinks = document.querySelectorAll("[data-nav-link]");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const mobileOpenBtn = document.getElementById("mobile-menu-button");
-            const mobileCloseBtn = document.getElementById("mobile-menu-close");
 
-            const setLinkState = () => {
-                navLinks.forEach((link) => {
-                    const isActive = link.dataset.navLink === currentPage;
-                    const muted = link.dataset.navMuted;
-                    if (isActive) {
-                        if (muted) link.classList.remove(muted);
-                        link.classList.add("bg-primary", "text-white", "shadow-lg", "shadow-primary/30");
-                    } else {
-                        link.classList.remove("bg-primary", "text-white", "shadow-lg", "shadow-primary/30");
-                        if (muted && !link.classList.contains(muted)) {
-                            link.classList.add(muted);
+<body data-page="contact"
+    class="sharp-theme bg-background-light text-[#1b0e0e] font-body antialiased overflow-x-hidden selection:bg-gray-200">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
+            <div class="px-4 md:px-8 lg:px-12 xl:px-20 py-8 flex items-center gap-6 w-full">
+                <div class="flex items-center gap-3 group cursor-pointer shrink-0">
+                    <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                        class="h-16 w-auto object-contain drop-shadow-lg" loading="lazy" />
+                    <span class="sr-only">Million Dreams</span>
+                </div>
+                <nav
+                    class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
+                    <a data-nav-link="home" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="index.html">Home</a>
+                    <a data-nav-link="about" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="about-us.html">About</a>
+                    <a data-nav-link="developers" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="developer.html">Developers</a>
+                    <a data-nav-link="contact" data-nav-muted="text-primary/70"
+                        class="text-base font-semibold px-5 py-2 rounded-full text-primary/70 hover:text-primary hover:bg-white transition-all"
+                        href="contact-us.html" aria-current="page">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a class="hidden md:inline-flex items-center gap-2 bg-white/80 border border-[#25D366]/40 text-[#1d7a4a] px-6 py-3 rounded-2xl text-sm md:text-base font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all min-w-[130px] justify-center "
+                        href="https://wa.me/971523243879" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined text-[18px]">chat</span>
+                        <span>WhatsApp</span>
+                    </a>
+                    <button type="button" data-link="contact"
+                        class="bg-gradient-to-r from-primary to-[#111827] hover:from-[#111827] hover:to-primary text-white text-sm md:text-base font-bold px-6 py-3 rounded-2xl shadow-xl shadow-gray-300 transition-all transform hover:-translate-y-0.5 flex items-center gap-3 min-w-[130px] justify-center ">
+                        <span>Enquire</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+                    </button>
+                    <button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false"
+                        class="lg:hidden p-2 text-gray-900">
+                        <span class="material-symbols-outlined text-[28px]">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div id="mobile-menu"
+            class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                        class="h-12 w-auto object-contain drop-shadow-lg" loading="lazy" />
+                    <span class="sr-only">Million Dreams</span>
+                </div>
+                <button id="mobile-menu-close" class="p-2 text-gray-900">
+                    <span class="material-symbols-outlined text-[28px]">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-3 text-base font-semibold">
+                <a data-nav-link="home" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="index.html">Home</a>
+                <a data-nav-link="about" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="about-us.html">About</a>
+                <a data-nav-link="developers" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10"
+                    href="developer.html">Developers</a>
+                <a data-nav-link="contact" data-nav-muted="text-primary/80"
+                    class="px-4 py-3 rounded-2xl text-primary/80 hover:bg-primary/10" href="contact-us.html">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3">
+                <a class="inline-flex items-center justify-center gap-2 bg-white border border-[#25D366]/40 text-[#1d7a4a] px-4 py-3 rounded-2xl font-semibold tracking-wide hover:bg-[#25D366] hover:text-white shadow-md shadow-[#25D366]/10 transition-all"
+                    href="https://wa.me/971523243879" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span>WhatsApp</span>
+                </a>
+                <button type="button" data-link="contact"
+                    class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#111827] text-white font-bold px-4 py-3 rounded-2xl shadow-xl shadow-gray-300 transition-all">
+                    <span>Enquire</span>
+                    <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+                </button>
+            </div>
+        </div>
+    <a href="tel:+971523243879"
+        class="fixed bottom-24 right-4 md:right-8 z-40 inline-flex items-center gap-2 bg-[#1f2937] text-white font-bold px-4 py-3 rounded-full shadow-xl shadow-gray-500/40 hover:bg-gray-900 transition-transform hover:-translate-y-0.5 min-w-[130px] justify-center"
+        aria-label="Call us">
+        <span class="material-symbols-outlined text-[20px]">call</span>
+        <span class="text-sm">Call Now</span>
+    </a>
+    <a href="https://wa.me/971523243879" target="_blank" rel="noopener"
+        class="fixed bottom-6 right-4 md:right-8 z-40 inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-4 py-3 rounded-full shadow-xl shadow-[#25D366]/40 hover:bg-[#1ea856] transition-transform hover:-translate-y-0.5 min-w-[130px] justify-center"
+        aria-label="WhatsApp chat">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+        <span class="text-sm">WhatsApp</span>
+    </a>
+        <main class="flex flex-col flex-1 w-full">
+            <!-- Hero Section -->
+            <section
+                class="relative w-full py-20 px-5 md:px-20 lg:px-40 flex flex-col items-center justify-center text-center">
+                <div class="absolute inset-0 z-0 opacity-10"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5YcUFcjFPU7q9mL2L0i0suWfMlNV0wkX_g2d6eODwEbWxEc17sQoUUmqrJXHNw47UqYSsmr7-uHKlbkBOpPpQR-XKXHa5M1Tp3k2LAjKzvuI8ZswEyXMIaYLKFtRItAViIlw24d3tSfSIkyqFcinWbL8oYOsESzSzTx49tIvhfuYhN2tpPsoZRweo0QufhfH63OZTmLYGUhw-3ErrxkrZn6Bo62gJRYwfitR5h23a0_WDXVjyz3VApLOIxrFdH1rKWdJfw0K-vYO4');">
+                </div>
+                <div class="max-w-3xl relative z-10 flex flex-col gap-6">
+                    <span class="uppercase tracking-[0.2em] text-xs font-bold text-primary">Private Concierge</span>
+                    <h1 class="text-4xl md:text-6xl font-display leading-tight text-gray-900">
+                        Speak with Dubai's <br /> <span class="text-primary">Premier Developers</span>
+                    </h1>
+                    <p class="text-lg text-gray-500 font-light max-w-xl mx-auto">
+                        Schedule a bespoke consultation with Million Dreams to discover curated residences, investment
+                        launches, and developer partnerships across the UAE.
+                    </p>
+                </div>
+            </section>
+            <!-- Quick Connect Cards -->
+            <section class="w-full px-5 md:px-10 max-w-7xl mx-auto -mt-8 mb-20 relative z-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="group flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-xl shadow-soft border border-transparent hover:border-primary/20 transition-all duration-300">
+                        <div
+                            class="size-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">chat</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Concierge WhatsApp</h3>
+                        <p class="text-center text-gray-500 text-sm">Instant updates on show suites, brochures, and
+                            private viewing slots.</p>
+                        <a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                            href="#">
+                            Start Chat <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-xl shadow-soft border border-transparent hover:border-primary/20 transition-all duration-300">
+                        <div
+                            class="size-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">mail</span>
+                        </div>
+                        <h3 class="text-xl font-bold">General Enquiries</h3>
+                        <p class="text-center text-gray-500 text-sm">For partnership opportunities, press briefings, and
+                            project collaborations.</p>
+                        <a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                            href="#">
+                            Email Us <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-xl shadow-soft border border-transparent hover:border-primary/20 transition-all duration-300">
+                        <div
+                            class="size-14 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">location_on</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Visit HQ</h3>
+                        <p class="text-center text-gray-500 text-sm">Business Bay, Sobha Ivory - 1, Office 205.</p>
+                        <a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                            href="#">
+                            Get Directions <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Main Form & Map Section -->
+            <section class="w-full bg-white py-20">
+                <div class="max-w-7xl mx-auto px-5 md:px-10">
+                    <div class="flex flex-col lg:flex-row gap-16">
+                        <!-- Left: Form -->
+                        <div class="flex-1 flex flex-col gap-8">
+                            <div>
+                                <h2 class="text-4xl font-display text-gray-900 leading-tight mb-4">Send a Message</h2>
+                                <p class="text-gray-500">Tell us what you’re looking for and our developer liaison desk
+                                    will reply within 24 hours with tailored options.</p>
+                            </div>
+                            <form id="contact-form" class="flex flex-col gap-6">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <label class="flex-1 flex flex-col gap-2">
+                                        <span class="text-sm font-bold text-gray-900">Full Name</span>
+                                        <input
+                                            class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm"
+                                            placeholder="e.g. Sheikh Mohammed" type="text" />
+                                    </label>
+                                    <label class="flex-1 flex flex-col gap-2">
+                                        <span class="text-sm font-bold text-gray-900">Company</span>
+                                        <input
+                                            class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm"
+                                            placeholder="Developer Name LLC" type="text" />
+                                    </label>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <label class="flex-1 flex flex-col gap-2">
+                                        <span class="text-sm font-bold text-gray-900">Email Address</span>
+                                        <input
+                                            class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm"
+                                            placeholder="name@company.com" type="email" />
+                                    </label>
+                                    <label class="flex-1 flex flex-col gap-2">
+                                        <span class="text-sm font-bold text-gray-900">Phone Number</span>
+                                        <input
+                                            class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm"
+                                            placeholder="Phone (e.g. +971 5x xxx xxxx)" type="tel" />
+                                    </label>
+                                </div>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-sm font-bold text-gray-900">Enquiry Type</span>
+                                    <select
+                                        class="w-full h-14 rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors text-gray-500 text-sm">
+                                        <option selected disabled>Select Enquiry Type</option>
+                                        <option>Villa</option>
+                                        <option>Townhouse</option>
+                                        <option>Apartment</option>
+                                    </select>
+                                </label>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-sm font-bold text-gray-900">Message</span>
+                                    <textarea
+                                        class="w-full rounded-lg bg-background-light border-gray-200 focus:border-primary focus:ring-0 transition-colors placeholder:text-gray-400 text-sm p-4 resize-none"
+                                        placeholder="How can we assist you today?" rows="4"></textarea>
+                                </label>
+                                <button
+                                    class="mt-4 h-14 w-full md:w-auto md:min-w-[130px] self-start rounded-full bg-primary text-white font-bold text-sm tracking-wide uppercase hover:bg-[#111827] transition-all shadow-lg shadow-gray-300 flex items-center justify-center gap-2"
+                                    type="submit">
+                                    <span>Submit Enquiry</span>
+                                    <span class="material-symbols-outlined text-lg">send</span>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Right: Map & Info -->
+                        <div class="flex-1 flex flex-col gap-8">
+                            <div class="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-soft group">
+                                <!-- Map Placeholder -->
+                                <div class="absolute inset-0 bg-gray-200 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                    data-location="Dubai Downtown Map"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb9tbv1I6gdCzE4cV9GeotUhSsUyFipvIcBPUIlVhX85MxGSx3XOo8BCMHVOpNbGOCqGr5tfn66WRXf2VIqMv-WOiUbCgFgpZPyiOACj9bAOX97jzvWrmi8IMwqx_OHwJit3Qewm5b2OTuoyFNuNd4LTW-873QyHy6dbMSy7wOhdy6Wkr4LmQirFXwL5If2PMNYjzoizCFZaan-vH-XNzyMZgo2WmtK_w6oogMT4gbxGwF4kSh9kfUuwyoZ1K_O-dW7kekQ_8cJZ_f"); filter: grayscale(100%) contrast(1.1);'>
+                                </div>
+                                <!-- Custom Pin Overlay -->
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                                    <div
+                                        class="size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/40 animate-bounce">
+                                        <span class="material-symbols-outlined text-2xl">apartment</span>
+                                    </div>
+                                    <div
+                                        class="mt-2 bg-white px-3 py-1 rounded-full text-xs font-bold shadow-md whitespace-nowrap">
+                                        HQ • Business Bay</div>
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur rounded-xl p-4 shadow-sm border border-gray-100">
+                                    <div class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1">pin_drop</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-gray-900">Million Dreams HQ</p>
+                                            <p class="text-xs text-gray-500 mt-1">Office 205, Sobha Ivory -
+                                                1<br />Business Bay, Dubai, UAE</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Accordion (Simple) -->
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-xl font-display font-medium">Common Questions</h3>
+                                <div class="border-b border-gray-100 pb-4">
+                                    <details class="group">
+                                        <summary
+                                            class="flex cursor-pointer items-center justify-between font-medium text-gray-900 list-none">
+                                            <span>How do I request a private developer presentation?</span>
+                                            <span class="transition group-open:rotate-180">
+                                                <span class="material-symbols-outlined">expand_more</span>
+                                            </span>
+                                        </summary>
+                                        <p class="group-open:animate-fadeIn mt-3 text-sm text-gray-500 leading-relaxed">
+                                            Submit the form with “Private Presentation” in the enquiry type. Our
+                                            concierge will coordinate a session with the relevant developer team within
+                                            24 hours.
+                                        </p>
+                                    </details>
+                                </div>
+                                <div class="border-b border-gray-100 pb-4">
+                                    <details class="group">
+                                        <summary
+                                            class="flex cursor-pointer items-center justify-between font-medium text-gray-900 list-none">
+                                            <span>Is there a fee for your advisory service?</span>
+                                            <span class="transition group-open:rotate-180">
+                                                <span class="material-symbols-outlined">expand_more</span>
+                                            </span>
+                                        </summary>
+                                        <p class="group-open:animate-fadeIn mt-3 text-sm text-gray-500 leading-relaxed">
+                                            Consultations for buyers and investors are complimentary. Developers engage
+                                            us through bespoke marketing and launch partnerships, keeping the service
+                                            free for clients.
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Image Gallery Strip -->
+            <section class="w-full py-10 bg-background-light">
+                <div class="max-w-7xl mx-auto px-5 md:px-10">
+                    <p class="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-8">Trusted by the
+                        Elite</p>
+                    <div
+                        class="flex justify-center flex-wrap gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <!-- Abstract Logo Representations using Text for demo -->
+                        <div
+                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
+                            EMAAR</div>
+                        <div
+                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
+                            DAMAC</div>
+                        <div
+                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
+                            NAKHEEL</div>
+                        <div
+                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
+                            MERAAS</div>
+                        <div
+                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
+                            SOBHA</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="sharp-theme bg-background-light pt-20 pb-8 px-4 md:px-12 xl:px-40 border-t border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                            class="h-10 w-auto object-contain drop-shadow" loading="lazy" />
+                        <span class="sr-only">Million Dreams</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Your premier partner for luxury real estate in Dubai. We turn million-dollar dreams into
+                        addressable reality.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-gold transition-colors" href="#"><span
+                                class="material-symbols-outlined">public</span></a>
+                        <a class="text-gray-400 hover:text-gold transition-colors" href="#"><span
+                                class="material-symbols-outlined">camera_alt</span></a>
+                        <a class="text-gray-400 hover:text-gold transition-colors" href="#"><span
+                                class="material-symbols-outlined">work</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a class="hover:text-gold transition-colors" href="#">Buy Property</a></li>
+                        <li><a class="hover:text-gold transition-colors" href="#">Sell Property</a></li>
+                        <li><a class="hover:text-gold transition-colors" href="#">Off-Plan Projects</a></li>
+                        <li><a class="hover:text-gold transition-colors" href="#">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-gold mt-0.5">location_on</span>
+                            <span>Office 205, Sobha Ivory - 1,<br />Business Bay, Dubai</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-gold">call</span>
+                            <span>+971 523243879</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-gold">mail</span>
+                            <span>info@mdre.ae</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rounded-xl overflow-hidden h-40 bg-gray-200 relative group">
+                    <img class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                        data-alt="Map location preview" data-location="Dubai Map"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobA5kGoMYa7_L-9bIaaFYzmkMcAuaiQ-01694pUeiOmTdo9IS-zC16-fWjWGtJuhKY4T-YbHd3FVtArmaBrfyJni9g0FA-sxlY9c-bNYTKfMlKP13f2xJIBEfxKVTdZ0b4ZcvEwHCKB4RKGLEW_OfcKg7r_4UjSP_mILRv6cnF1rPRi3RHV8XuB62_fswTF8kfokqKgdk7xIAQMcsIPEjkGA3SbGyLM-H9f0bGhu3GB6U87eUU7p8WW84xBZJwB_mkxels7Z8NWs" />
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <a href="https://maps.app.goo.gl/3rJj5vVAGP3dDubai" target="_blank" rel="noopener"
+                            class="bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded shadow-sm inline-flex items-center gap-1">View
+                            on Map<span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                <p>Ac 2024 Million Dreams Real Estate. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-gold" href="privacy-policy.html">Privacy Policy</a>
+                    <a class="hover:text-gold" href="terms-conditions.html">Terms &amp; Conditions</a>
+                    <a class="hover:text-gold" href="sitemap.html">Sitemap</a>
+                </div>
+                <button class="bg-gray-100 p-2 rounded-full hover:bg-gold hover:text-white transition-colors"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                    <span class="material-symbols-outlined text-sm">arrow_upward</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script>
+            (function () {
+                const header = document.getElementById("main-header");
+                const body = document.body;
+                const currentPage = body.dataset.page;
+                const navLinks = document.querySelectorAll("[data-nav-link]");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const mobileOpenBtn = document.getElementById("mobile-menu-button");
+                const mobileCloseBtn = document.getElementById("mobile-menu-close");
+
+                const setLinkState = () => {
+                    navLinks.forEach((link) => {
+                        const isActive = link.dataset.navLink === currentPage;
+                        const muted = link.dataset.navMuted;
+                        if (isActive) {
+                            if (muted) link.classList.remove(muted);
+                            link.classList.add("bg-gray-900", "text-white", "shadow-lg", "shadow-gray-300");
+                        } else {
+                            link.classList.remove("bg-gray-900", "text-white", "shadow-lg", "shadow-gray-300");
+                            if (muted && !link.classList.contains(muted)) {
+                                link.classList.add(muted);
+                            }
                         }
-                    }
-                });
-            };
-
-            const setMenuState = (open) => {
-                if (!mobileMenu) return;
-                mobileMenu.classList.toggle("translate-x-0", open);
-                mobileMenu.classList.toggle("translate-x-full", !open);
-                body.classList.toggle("overflow-hidden", open);
-                mobileOpenBtn?.setAttribute("aria-expanded", open);
-            };
-
-            mobileOpenBtn?.addEventListener("click", () => {
-                const isOpen = mobileOpenBtn.getAttribute("aria-expanded") === "true";
-                setMenuState(!isOpen);
-            });
-
-            mobileCloseBtn?.addEventListener("click", () => setMenuState(false));
-            mobileMenu?.querySelectorAll("a")?.forEach((link) =>
-                link.addEventListener("click", () => setMenuState(false))
-            );
-
-            if (header) {
-                const toggleHeaderState = () => {
-                    const isSticky = window.scrollY > 10;
-                    header.classList.toggle("shadow-xl", isSticky);
-                    header.classList.toggle("border-b", isSticky);
-                    header.classList.toggle("border-gold/20", isSticky);
-                    header.classList.toggle("bg-white/95", isSticky);
-                    header.classList.toggle("backdrop-blur-md", isSticky);
+                    });
                 };
-                toggleHeaderState();
-                window.addEventListener("scroll", toggleHeaderState, {passive: true});
-            }
 
-            setLinkState();
-        })();
+                const setMenuState = (open) => {
+                    if (!mobileMenu) return;
+                    mobileMenu.classList.toggle("translate-x-0", open);
+                    mobileMenu.classList.toggle("translate-x-full", !open);
+                    body.classList.toggle("overflow-hidden", open);
+                    mobileOpenBtn?.setAttribute("aria-expanded", open);
+                };
+
+                mobileOpenBtn?.addEventListener("click", () => {
+                    const isOpen = mobileOpenBtn.getAttribute("aria-expanded") === "true";
+                    setMenuState(!isOpen);
+                });
+
+                mobileCloseBtn?.addEventListener("click", () => setMenuState(false));
+                mobileMenu?.querySelectorAll("a")?.forEach((link) =>
+                    link.addEventListener("click", () => setMenuState(false))
+                );
+
+                if (header) {
+                    const toggleHeaderState = () => {
+                        const isSticky = window.scrollY > 10;
+                        header.classList.toggle("shadow-xl", isSticky);
+                        header.classList.toggle("border-b", isSticky);
+                        header.classList.toggle("border-gray-200", isSticky);
+                        header.classList.toggle("bg-white/95", isSticky);
+                        header.classList.toggle("backdrop-blur-md", isSticky);
+                    };
+                    toggleHeaderState();
+                    window.addEventListener("scroll", toggleHeaderState, { passive: true });
+                }
+
+                setLinkState();
+            })();
 
         const buttonRoutes = {
             contact: "#contact-form",
@@ -401,11 +519,11 @@
         const navigateTo = (destination) => {
             if (!destination) return;
             if (destination.startsWith("#")) {
-                document.querySelector(destination)?.scrollIntoView({behavior: "smooth"});
+                document.querySelector(destination)?.scrollIntoView({ behavior: "smooth" });
                 return;
             }
             if (destination.includes("contact-us.html#contact-form") && /contact-us\\.html$/i.test(window.location.pathname)) {
-                document.querySelector("#contact-form")?.scrollIntoView({behavior: "smooth"});
+                document.querySelector("#contact-form")?.scrollIntoView({ behavior: "smooth" });
                 return;
             }
             window.location.href = destination;
@@ -418,4 +536,14 @@
             });
         });
     </script>
-</body></html>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
