@@ -16,6 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -52,6 +56,27 @@
         body.sharp-theme .rounded-full {
             border-radius: 3px !important;
         }
+
+        .developers-carousel .logo-tile {
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(1);
+        }
+
+        .developers-carousel .logo-tile img {
+            max-height: 220px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .developers-carousel .logo-tile:hover {
+            filter: grayscale(0);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 
@@ -61,11 +86,11 @@
         <!-- Navigation -->
         <header id="main-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
             <div class="px-4 md:px-8 lg:px-12 xl:px-20 py-8 flex items-center gap-6 w-full">
-                <div class="flex items-center gap-3 group cursor-pointer shrink-0">
-                    <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
+                <a href="index.html" class="flex items-center gap-3 group cursor-pointer shrink-0">
+                <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
                         class="h-16 w-auto object-contain drop-shadow-lg" loading="lazy" />
-                    <span class="sr-only">Million Dreams</span>
-                </div>
+                <span class="sr-only">Million Dreams</span>
+            </a>
                 <nav
                     class="hidden lg:flex items-center bg-primary/5 border border-primary/20 rounded-full px-2 py-1 shadow-sm shadow-primary/10 mx-auto">
                     <a data-nav-link="home" data-nav-muted="text-primary/70"
@@ -100,13 +125,13 @@
             </div>
         </header>
         <div id="mobile-menu"
-            class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
+            class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl flex flex-col gap-6 p-6 transition-transform duration-300 translate-x-full lg:hidden overflow-y-auto max-h-screen">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
                     <img src="assets/Million Dreams_Logo_Golden.png" alt="Million Dreams logo"
                         class="h-12 w-auto object-contain drop-shadow-lg" loading="lazy" />
                     <span class="sr-only">Million Dreams</span>
-                </div>
+                </a>
                 <button id="mobile-menu-close" class="p-2 text-gray-900">
                     <span class="material-symbols-outlined text-[28px]">close</span>
                 </button>
@@ -271,10 +296,10 @@
                                         placeholder="How can we assist you today?" rows="4"></textarea>
                                 </label>
                                 <button
-                                    class="mt-4 h-14 w-full md:w-auto md:min-w-[130px] self-start rounded-full bg-primary text-white font-bold text-sm tracking-wide uppercase hover:bg-[#111827] transition-all shadow-lg shadow-gray-300 flex items-center justify-center gap-2"
+                                    class="mt-4 h-12 px-6 md:px-8 w-full md:w-auto md:min-w-[150px] self-start rounded-lg bg-[#0f172a] text-white font-bold text-sm tracking-[0.08em] uppercase transition-all shadow-[0_12px_30px_-12px_rgba(0,0,0,0.45)] hover:bg-black hover:-translate-y-0.5 flex items-center justify-center gap-2"
                                     type="submit">
                                     <span>Submit Enquiry</span>
-                                    <span class="material-symbols-outlined text-lg">send</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
                                 </button>
                             </form>
                         </div>
@@ -349,29 +374,36 @@
                     </div>
                 </div>
             </section>
-            <!-- Image Gallery Strip -->
-            <section class="w-full py-10 bg-background-light">
+            <!-- Featured Developers Carousel -->
+            <section class="py-16 bg-background-light overflow-hidden">
                 <div class="max-w-7xl mx-auto px-5 md:px-10">
-                    <p class="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-8">Trusted by the
-                        Elite</p>
-                    <div
-                        class="flex justify-center flex-wrap gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                        <!-- Abstract Logo Representations using Text for demo -->
-                        <div
-                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
-                            EMAAR</div>
-                        <div
-                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
-                            DAMAC</div>
-                        <div
-                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
-                            NAKHEEL</div>
-                        <div
-                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
-                            MERAAS</div>
-                        <div
-                            class="h-12 px-6 flex items-center justify-center border border-gray-200 rounded-lg bg-white font-display font-bold text-xl">
-                            SOBHA</div>
+                    <div class="mb-8">
+                        <h2 class="text-3xl md:text-4xl font-display text-gray-900 leading-tight">Featured Developers</h2>
+                        <p class="text-gray-500 mt-2 font-light">Partnering with the visionaries shaping Dubai's skyline.</p>
+                    </div>
+                    <div class="owl-carousel developers-carousel">
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Emaar.png" alt="Emaar logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Wasl Properties.png"
+                                alt="Wasl Properties logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Aldar.png" alt="Aldar logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Nshama.png" alt="Nshama logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Dubai South.png" alt="Dubai South logo" />
+                        </div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Nakheel.png" alt="Nakheel logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Azizi.png" alt="Azizi logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Binghatti.png" alt="Binghatti logo" />
+                        </div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/BNW Developments.png"
+                                alt="BNW Developments logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Damac.png" alt="DAMAC logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Danube.png" alt="Danube logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Ellington.png" alt="Ellington logo" />
+                        </div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Imtiaz Development.png"
+                                alt="Imtiaz Development logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Meeras.png" alt="Meeras logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Omniyat.png" alt="Omniyat logo" /></div>
+                        <div class="logo-tile"><img src="assets/dubai-developer-logos/Sobha.png" alt="Sobha logo" /></div>
                     </div>
                 </div>
             </section>
@@ -450,12 +482,14 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-            (function () {
-                const header = document.getElementById("main-header");
-                const body = document.body;
-                const currentPage = body.dataset.page;
-                const navLinks = document.querySelectorAll("[data-nav-link]");
+        (function () {
+            const header = document.getElementById("main-header");
+            const body = document.body;
+            const currentPage = body.dataset.page;
+            const navLinks = document.querySelectorAll("[data-nav-link]");
                 const mobileMenu = document.getElementById("mobile-menu");
                 const mobileOpenBtn = document.getElementById("mobile-menu-button");
                 const mobileCloseBtn = document.getElementById("mobile-menu-close");
@@ -534,6 +568,30 @@
                 const target = button.dataset.link;
                 navigateTo(buttonRoutes[target] || target);
             });
+        });
+
+        // Developers logo carousel
+        $(document).ready(function () {
+            const $carousel = $(".developers-carousel");
+            if ($carousel.length) {
+                $carousel.owlCarousel({
+                    loop: true,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
+                    smartSpeed: 800,
+                    dots: false,
+                    nav: false,
+                    margin: 20,
+                    responsive: {
+                        0: { items: 2 },
+                        480: { items: 3 },
+                        768: { items: 4 },
+                        1024: { items: 5 },
+                        1280: { items: 6 }
+                    }
+                });
+            }
         });
     </script>
 </body>
